@@ -1,0 +1,169 @@
+.portfolio-section{
+	padding: 80px 0; 
+	background-color: $bg-color;	
+	overflow: hidden;
+}
+
+.portfolio-title{
+	@extend %title-center;
+}
+
+.portfolio-subtitle{	
+	@extend %subtitle-center;	
+}
+
+.portfolio-nav{
+	width: 100%;
+	margin: 80px 0;
+	padding: 40px 5% 40px 10%;
+	background-color: $bg-color-dark;
+	@include break(tablet-m){
+		@include flex(row, space-around);
+	}
+
+	&__title{
+		width: 50%;
+		@include font(14px, bold, #636363, $font-b);
+		text-transform: uppercase;
+
+		@include break(tablet-m){
+			width: 40%;
+			padding-right: 10%;
+			text-align: right;
+		}
+	}
+
+	&__btn-group{		
+		width: 50%;
+
+		@include break(tablet-m){
+			width: 60%;
+			@include flex(row, flex-start);
+		}
+	}
+
+	&__btn{
+		position: relative;
+		min-height: 40px;
+		@extend %btn-clean;	
+		@include flex(row, space-around);					
+		@include font(14px, bold, #555555, $font-b);
+		background-color: $bg-color-dark;		
+		padding: 0 10px;
+		transition: color .3s ease;	
+
+		&:after{
+			@extend %absolute-center;
+			content: '';
+			@include size(0%, 2px);
+			background-color: $accent-color;
+			bottom: 0;			
+			transition: width .3s ease;
+		}
+
+		@include hover{
+			color: $accent-color;
+			transition: color .3s ease;
+
+			&:after{
+				width: 100%;
+				transition: width .3s ease;
+			}
+		}	
+	}
+
+	&__btn_active{
+		color: $accent-color;
+		
+		&:after{
+			@extend %absolute-center;
+			content: '';
+			@include size(100%, 2px);
+			background-color: $accent-color;
+			bottom: 0;			
+		}
+	}
+}
+
+.portfolio-grid{
+	margin: 0 auto;
+	overflow: hidden;
+
+	&__item{
+		position: relative;	
+		@include size(380px, 200px);
+		max-width: 98%;	
+		max-height: 255px;							
+		overflow: hidden;
+		background-color: $bg-color;	
+
+		@include hover{
+			.portfolio-grid__img{
+				opacity: .2;
+				transition: opacity .3s ease;
+			}
+
+			.portfolio-grid__title,
+			.portfolio-grid__subtitle,
+			.portfolio-grid__zoom,
+			.portfolio-grid__link{
+				opacity: 1;
+				transition: opacity .3s ease;
+			}
+		}	
+	}
+
+	&__img{		
+		@extend %grid-img;	
+	}
+
+	&__title{
+		position: absolute;
+		left: 40px;	
+		top: 40px;	
+		@extend %grid-title;
+		padding-right: 10px;		
+		opacity: 0;
+		transition: opacity .3s ease;		
+	}
+
+	&__subtitle{
+		@extend %grid-subtitle;
+		padding-right: 10px;
+		opacity: 0;
+		transition: opacity .3s ease;	
+	}
+
+	&__zoom{
+		@extend %zoom-icon;
+		right: 100px;
+		bottom: 20px;
+	}
+
+	&__link{
+		@extend %link-icon;		
+		right: 40px;
+		bottom: 20px;			
+	}
+
+	&__icon{
+		@extend %grid-icon;
+	}
+}
+
+.portfolio-btn{
+	@extend %btn;
+	@extend %btn-clean;
+	min-width: 60%;
+	color: #636363;	
+	font-size: 13px;
+	letter-spacing: .7px;
+	margin: 40px auto 0 auto;	
+	background-color: $bg-color-dark;
+	@include hover-color($accent-color);
+}
+
+.js-portfolio-hidden{
+	visibility:hidden;
+	@include size(0px, 0px);
+}

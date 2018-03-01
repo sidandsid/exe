@@ -1,0 +1,298 @@
+<header class="header">
+
+	<!-- Language, contact, login, wishlist, social-media -->
+	<div class="header-top">
+
+		<!-- Language -->
+		<div class="header-lang">
+			<a class="header-lang__link" href="#">
+				<svg class="header-lang__icon">
+    				<use xlink:href="svg/svg-sprite.svg#lang-icon"></use>
+				</svg>
+				English			
+			</a>
+
+			<ul class="header-lang__list js-header-lang__list">				
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Deutsch</a>
+				</li>
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Français</a>
+				</li>
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Italiano</a>
+				</li>
+			</ul>		
+		</div>
+
+		<!-- Phone -->
+		<a class="header-phone" href="tel:+440 875369208">
+			<svg class="header-phone__icon">
+    			<use xlink:href="svg/svg-sprite.svg#phone-icon"></use>
+			</svg>
+			<span class="header-phone__number">+440 875369208</span>
+		</a>
+
+		<!-- Email -->
+		<a class="header-email" href="mailto:info@sitename.com?Subject=Need%20info">
+			<svg class="header-email__icon">
+    			<use xlink:href="svg/svg-sprite.svg#paper-plane-icon"></use>
+			</svg>
+			<span class="header-email__address">info@sitename.com</span>
+		</a>
+		
+		<!-- Divider -->
+		<div class="header-divider"></div>
+		
+		<!-- Login -->
+		<div class="header-login">			
+			<a class="header-login__signin" href="#">
+				<svg class="header-login__icon">
+    				<use xlink:href="svg/svg-sprite.svg#login-icon"></use>
+				</svg>
+			Sign In
+			</a>/
+			<a class="header-login__register" href="#">Register</a>
+		</div>
+
+		<!-- Wishlist -->
+		<div class="header-wishlist">
+			<a class="header-wishlist__btn js-product-btn" href="#">
+				<svg class="header-wishlist__icon">
+    				<use xlink:href="svg/svg-sprite.svg#heart-icon"></use>
+				</svg>
+				<span class="header-wishlist__name">Wishlist:</span><span class="header-wishlist__item">3 items</span>	
+			</a>	
+
+			<!-- Wishlist itself -->
+			<div class="products wishlist js-products">			
+				<div class="products-close">
+					<span class="products-close__btn js-wishlist-close__btn">×</span>
+				</div>
+
+				<!-- Item #1 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-1.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+
+				<!-- Item #2 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-2.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+
+				<!-- Item #3 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-3.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+			
+				<div class="products-bottom">
+					<a class="products-bottom__btn" href="#">My wishlist</a>
+					<a class="products-bottom__btn" href="#">Clear all</a>
+				</div>
+			</div>					
+		</div>	
+
+		<!-- Social-media -->
+		<div class="header-social">
+			<ul class="header-social__list">
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#facebook-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#twitter-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#tumblr-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#linkedin-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#google-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#rss-icon"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Logo, navigation, cart, search -->
+	<div class="header-menu">
+
+		<!-- Logo -->
+		<a class="header-logo" href="#">èxe</a>
+		<span class="header-logo_mobile js-header-logo_mobile">èxe <span class="header-logo_mobile-menu">mènu</span></span>
+		
+		<!-- Navigation -->
+		<nav class="header-nav js-header-nav">
+
+			<!-- Navigation - Home -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Home</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Home #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Home #2</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Navigation - About Us -->	
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">About Us</a>
+			</div>	
+			
+			<!-- Navigation - Pages -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Pages</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #3</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #4</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #5</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Navigation - Features -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Features</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #3</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #4</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Navigation - Portfolio -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Portfolio</a>
+			</div>	
+
+			<!-- Navigation - Blog -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Blog</a>
+			</div>	
+
+			<!-- Navigation - Shop -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Shop</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #3</a>
+					</li>					
+				</ul>
+			</div>
+
+			<!-- Navigation - Contacts -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Contacts</a>
+			</div>
+		</nav>
+
+		<!-- Cart -->
+		<div class="header-cart">	
+			<a class="header-cart__btn js-product-btn" href="#">		
+				<svg class="header-cart__icon">
+    				<use xlink:href="svg/svg-sprite.svg#cart-icon"></use>
+				</svg>
+				<span class="header-cart__counter">1</span>
+			</a>
+
+			<!-- Cart list -->
+			<div class="products cart js-products">			
+				<div class="products-close">
+					<span class="products-close__btn js-wishlist-cart__btn">×</span>
+				</div>			
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-1.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>			
+				<div class="products-bottom">
+					<a class="products-bottom__btn" href="#">My cart</a>
+					<a class="products-bottom__btn" href="#">Clear all</a>
+				</div>
+			</div>			
+		</div>
+
+		<!-- Search -->
+		<div class="header-search">	
+			<input class="header-search__input js-header-search__input" type="Search" placeholder="Search...">				
+			<svg class="header-search__icon js-header-search__icon">
+    			<use xlink:href="svg/svg-sprite.svg#search-icon"></use>
+			</svg>
+			<span class="header-search__close js-header-search__close"></span>
+		</div>
+	</div>
+</header>

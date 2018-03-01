@@ -1,0 +1,222 @@
+.choose-section{
+	position: relative;	
+	min-height: 550px;	
+	background-color: $bg-color-dark;
+	padding: 80px 5% 40px 5%;
+	@include break(1400px){	padding-left: 7%; }
+	@include break(1500px){	padding-left: 10%; }
+	@include break(1600px){ padding-left: 13%; }
+	@include break(1700px){	padding-left: 15%; }
+	@include break(1850px){	padding-left: 18%; }
+}
+
+.choose-text{
+	@include break(laptop-m){ max-width: 570px; }
+}
+
+.choose-title{
+	@extend %title-left;	
+}
+
+.choose-subtitle{
+	@extend %subtitle-left;
+}	
+
+/* Accordions */
+.choose-accordions{	
+	max-width: 570px;
+	margin: 40px auto 20px auto;
+	@include break(laptop-m){ margin: 40px 0 20px 0; }
+}
+
+.choose-accordion{
+	@include hover{
+		.choose-accordion__header{
+			background-color: $bg-color;
+			transition: background-color .2s ease;
+		}
+	}
+
+	&.active{
+		& .choose-accordion__header{
+			background-color: $bg-color;
+			transition: background-color .2s ease;
+		}		
+
+		& .choose-accordion__icon{	
+			transform: rotate(90deg);
+			transition: transform .2s ease;
+		}
+
+		& .choose-accordion__title, .choose-accordion__subtitle{
+			color: $accent-color;
+		}
+	}	
+	
+	&__header{
+		position: relative;	
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #373737;
+		border-radius: 5px;
+		cursor: pointer;
+		padding: 10px 0 10px 30px;
+		margin-bottom: 10px;		
+		transition: background-color .2s ease;	
+	}	
+	
+	&__title{		
+		@include font(18px, bold, #ffffff, $font-b);		
+		margin-right: 30px;	
+		cursor: pointer;
+		@media screen and (max-width: 600px){ width: 80%; }
+	}
+
+	&__subtitle{		
+		@include font(13px, normal, $text-color-light, $font-text);		
+		padding-top: 3px;
+		cursor: pointer;
+		@media screen and (max-width: 600px){ width: 80%; }	
+	}
+
+	&__arrow{
+		position: absolute;
+		display: block;
+		top: 0;
+		right: -1px;		
+		@include size(40px, 100%);
+		@include flex(row, center);
+		background-color: $accent-color;
+		border-radius: 0 5px 5px 0;	
+	}
+
+	&__icon{				
+		@include size(17px, 17px);
+		fill: #ffffff;
+		transition: transform .2s ease;
+	}
+
+	&__content{	
+		display: none;		
+		max-width: 570px;
+    	overflow: hidden;	
+    	padding: 0 2% 0 2%;
+	}
+
+	&__text{
+		@include font(14px, normal, $text-color-light, $font-text);
+		line-height: 140%;
+		margin-bottom: 20px;
+
+		&:first-child{
+			padding-top: 10px;
+		}
+	}
+}
+
+/* Slider */
+.choose-slider{
+	position: relative;
+	max-width: 590px;
+	margin: 40px auto 0 auto;
+
+	@include break(laptop-m){
+		position: absolute;
+		top: 40px;
+		right: 3%;
+		@include size(590px, 400px);
+	}
+		
+	@include break(1400px){ right: 7%; }
+	@include break(1500px){ right: 10%; }
+	@include break(1600px){ right: 13%; }
+	@include break(1700px){ right: 15%; }
+	@include break(1850px){ right: 17%; }
+
+	/* Adjusting Flickity plugin default pager */
+	.flickity-page-dots{			
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		max-width: 100px;			
+
+		& .dot{	
+			@include size(10px, 10px);	
+			background-color: #f2f2f2;	
+			opacity: 1;	
+			margin: 3px;
+
+			&:hover{
+				background-color: $accent-color;
+			}
+		}
+
+		& .dot.is-selected{
+			background-color: $accent-color;
+		}
+	}
+}
+
+.choose-slide{
+	width: 100%;
+	padding: 7px;
+}
+
+.choose-post{	
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #f2f2f2;
+	border-radius: 5px;	
+	padding: 25px 30px;
+	margin-bottom: 35px;
+
+	&:after{
+		position: absolute;
+		content: '';
+		top: 95%;
+		right: 13%;
+		@include size(0, 0);
+		@include border(solid, 30px 15px 0 15px, #f2f2f2 transparent transparent transparent);
+		border-radius: 15px;
+		transform: skewX(40deg);		
+	}
+
+	&__img{	
+		@include size(92px, 92px);
+		border-radius: 50%;
+		margin-right: 30px;		
+	}
+
+	&__text{
+		@include break(mobile-l){
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include break(tablet-s){ width: 75%; }		
+	}
+
+	&__title{
+		display: block;				
+		@include font(18px, normal, $text-color, $font-sb);
+		padding-top: 7px;		
+		@include break(mobile-l){ width: 60%; }
+	}
+
+	&__link{
+		display: block;		
+		@include font(14px, normal, #cccccc, $font-text);
+		padding-top: 7px;
+		@include break(mobile-l){
+			width: 40%;
+			text-align: right;
+		}		
+	}
+
+	&__quote{
+		width: 100%;
+		@include font(14px, normal, $text-color-light, $font-text);		
+		margin-top: 7px;		
+	}	
+}

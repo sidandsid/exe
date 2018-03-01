@@ -1,0 +1,123 @@
+.theme-section{
+	position: relative;
+	min-height: 825px;
+	background-color: $bg-color;
+	padding: 80px 5% 0 5%;
+}
+
+.theme-screens{		
+	max-width: 768px; 
+	max-height: 594px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	@include break(laptop-m){
+		position: absolute;
+		right: 3%;
+		bottom: 0;		
+	}
+
+	@include break(laptop-l){ right: 10%; }
+	@include break(1750px){ right: 15%; }
+
+	&__img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.theme-content{	
+	@include break(laptop-m){
+		position: absolute;
+		top: 15%;
+		left: 8%;
+		max-width: 360px;
+	}
+
+	@include break(laptop-l){ left: 15%; }
+	@include break(1750px){ left: 19%; }
+}
+
+.theme-title{
+	@extend %title-left;
+}
+
+.theme-subtitle{
+	@extend %subtitle-left;
+	margin-bottom: 30px;
+}
+
+.theme-items{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 20px;	
+	@include break(1267px){ justify-content: flex-start; }	
+}
+
+.theme-item{
+	position: relative;	
+	min-height: 100px;
+	max-width: 380px;	
+	margin-bottom: 30px;
+
+	@include hover{
+		.theme-item__logo{
+			border: 2px solid $accent-color;			
+			transition: border .3s ease;
+		}
+
+		.theme-item__icon{
+			fill: $accent-color;
+			transition: fill .3s ease;
+		}
+
+		.theme-item__title{
+			color: $accent-color;
+			transition: color .3s ease;
+		}
+
+		.theme-item__text{
+			color: #ffffff;
+			transition: color .3s ease;
+		}
+	}	
+
+	&__logo{
+		float: left;	
+		@include size(100px, 100px);
+		@include flex(row, space-around);	
+		border: 1px solid #636363;
+		border-radius: 50%;
+		transition: border .3s ease;		
+	}
+
+	&__icon{
+		@include size(38px, 38px);
+		fill: #636363;
+		transition: fill .3s ease;
+	}
+
+	&__title{
+		float: right;		
+		width: 65%;	
+		@include font(20px, bold, #ffffff, $font-b);
+		padding: 15px 0 0 10px;			
+		margin-bottom: 10px;
+		transition: color .3s ease;		
+	}
+
+	&__text{	
+		float: right;		
+		width: 65%;		
+		@include font(14px, normal, $text-color-light, $font-text);
+		line-height: 150%;	
+		padding-left: 10px;
+		margin: 0;		
+		hyphens: auto;
+		@extend %clearfix;
+		transition: color .3s ease;			
+	}
+}

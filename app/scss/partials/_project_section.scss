@@ -1,0 +1,73 @@
+.project-section{
+	background-color: $bg-color;
+	padding: 80px 6% 0 6%;
+	@include flex(row, space-around);
+	align-items: baseline;
+	@include break(1900){ padding: 80px 18.7% 0 18.7%; }
+}
+
+.project-item{
+	position: relative;	
+	width: 270px;
+	margin-bottom: 110px;
+
+	@include hover{
+		.project-item__logo{
+			border-color: $accent-color;
+			transition: border-color .3s ease;
+		}
+
+		.project-item__icon{
+			fill: $accent-color;
+			transition: fill .3s ease;
+		}
+
+		.project-item__title{
+			color: $accent-color;
+			transition: color .3s ease;
+		}
+
+		.project-item__text{
+			color: #ffffff;
+			transition: color .3s ease;
+		}
+	}
+	
+	&__logo{	
+		display: block;	
+		@include size(100px, 100px);
+		@include flex(row, center);		
+		border: 1px solid #636363;	
+		border-radius: 50%;	
+		margin-bottom: 30px;	
+		transition: border-color .3s ease;		
+	}
+
+	&__icon{
+		@include size(39px, 39px);
+		fill: #636363;
+		transition: fill .3s ease;
+	}
+
+	&__title{
+		@include font(18px, bold, #636363, $font-eb);
+		text-transform: uppercase;		
+		transition: color .3s ease;
+	}
+
+	&__text{
+		@include font(14px, normal, #555555, $font-text);
+		line-height: 150%;
+		transition: color .3s ease;
+		margin-top: 10px;
+
+		&:after{
+			@extend %absolute;
+			left: 0;
+			@include size(70px, 2px);
+			transform: translate(0px, 50px);
+			background-color: $accent-color;
+			transition: background-color .3s ease;		
+		}
+	}
+}

@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>èxe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding main.min.css file -->       
+    <link rel="stylesheet" href="css/main.min.css">    
+</head>
+<body>
+
+<div class="global-wrapper">	
+<!-- adding html files -->
+<header class="header">
+
+	<!-- Language, contact, login, wishlist, social-media -->
+	<div class="header-top">
+
+		<!-- Language -->
+		<div class="header-lang">
+			<a class="header-lang__link" href="#">
+				<svg class="header-lang__icon">
+    				<use xlink:href="svg/svg-sprite.svg#lang-icon"></use>
+				</svg>
+				English			
+			</a>
+
+			<ul class="header-lang__list js-header-lang__list">				
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Deutsch</a>
+				</li>
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Français</a>
+				</li>
+				<li class="header-lang__list-item">
+					<a class="header-lang__list-link" href="#">Italiano</a>
+				</li>
+			</ul>		
+		</div>
+
+		<!-- Phone -->
+		<a class="header-phone" href="tel:+440 875369208">
+			<svg class="header-phone__icon">
+    			<use xlink:href="svg/svg-sprite.svg#phone-icon"></use>
+			</svg>
+			<span class="header-phone__number">+440 875369208</span>
+		</a>
+
+		<!-- Email -->
+		<a class="header-email" href="mailto:info@sitename.com?Subject=Need%20info">
+			<svg class="header-email__icon">
+    			<use xlink:href="svg/svg-sprite.svg#paper-plane-icon"></use>
+			</svg>
+			<span class="header-email__address">info@sitename.com</span>
+		</a>
+		
+		<!-- Divider -->
+		<div class="header-divider"></div>
+		
+		<!-- Login -->
+		<div class="header-login">			
+			<a class="header-login__signin" href="#">
+				<svg class="header-login__icon">
+    				<use xlink:href="svg/svg-sprite.svg#login-icon"></use>
+				</svg>
+			Sign In
+			</a>/
+			<a class="header-login__register" href="#">Register</a>
+		</div>
+
+		<!-- Wishlist -->
+		<div class="header-wishlist">
+			<a class="header-wishlist__btn js-product-btn" href="#">
+				<svg class="header-wishlist__icon">
+    				<use xlink:href="svg/svg-sprite.svg#heart-icon"></use>
+				</svg>
+				<span class="header-wishlist__name">Wishlist:</span><span class="header-wishlist__item">3 items</span>	
+			</a>	
+
+			<!-- Wishlist itself -->
+			<div class="products wishlist js-products">			
+				<div class="products-close">
+					<span class="products-close__btn js-wishlist-close__btn">×</span>
+				</div>
+
+				<!-- Item #1 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-1.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+
+				<!-- Item #2 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-2.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+
+				<!-- Item #3 -->
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-3.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>	
+			
+				<div class="products-bottom">
+					<a class="products-bottom__btn" href="#">My wishlist</a>
+					<a class="products-bottom__btn" href="#">Clear all</a>
+				</div>
+			</div>					
+		</div>	
+
+		<!-- Social-media -->
+		<div class="header-social">
+			<ul class="header-social__list">
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#facebook-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#twitter-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#tumblr-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#linkedin-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#google-icon"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a class="header-social__link" href="#">
+						<svg class="header-social__icon">
+    						<use xlink:href="svg/svg-sprite.svg#rss-icon"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Logo, navigation, cart, search -->
+	<div class="header-menu">
+
+		<!-- Logo -->
+		<a class="header-logo" href="#">èxe</a>
+		<span class="header-logo_mobile js-header-logo_mobile">èxe <span class="header-logo_mobile-menu">mènu</span></span>
+		
+		<!-- Navigation -->
+		<nav class="header-nav js-header-nav">
+
+			<!-- Navigation - Home -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Home</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Home #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Home #2</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Navigation - About Us -->	
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">About Us</a>
+			</div>	
+			
+			<!-- Navigation - Pages -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Pages</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #3</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #4</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Pages #5</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Navigation - Features -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Features</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #3</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Features #4</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Navigation - Portfolio -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Portfolio</a>
+			</div>	
+
+			<!-- Navigation - Blog -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Blog</a>
+			</div>	
+
+			<!-- Navigation - Shop -->
+			<div class="header-nav__item">
+				<a class="header-nav__link drop-down js-header-nav__link" href="#">Shop</a>				
+				<ul class="header-nav__list js-header-nav__list">
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #1</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #2</a>
+					</li>
+					<li class="header-nav__list-item">
+						<a class="header-nav__list-link" href="#">Shop #3</a>
+					</li>					
+				</ul>
+			</div>
+
+			<!-- Navigation - Contacts -->
+			<div class="header-nav__item">
+				<a class="header-nav__link" href="#">Contacts</a>
+			</div>
+		</nav>
+
+		<!-- Cart -->
+		<div class="header-cart">	
+			<a class="header-cart__btn js-product-btn" href="#">		
+				<svg class="header-cart__icon">
+    				<use xlink:href="svg/svg-sprite.svg#cart-icon"></use>
+				</svg>
+				<span class="header-cart__counter">1</span>
+			</a>
+
+			<!-- Cart list -->
+			<div class="products cart js-products">			
+				<div class="products-close">
+					<span class="products-close__btn js-wishlist-cart__btn">×</span>
+				</div>			
+				<div class="products-item">
+					<img class="products-item__img" src="img/wishlist-icon-1.png" alt="">
+					<div class="products-item__text">
+						<a class="products-item__title" href="#">Claritas Etiam Processus</a>
+						<span class="products-item__price">$ 259.95</span>
+						<a class="products-item__remove" href="#">× Remove</a>
+					</div>
+				</div>			
+				<div class="products-bottom">
+					<a class="products-bottom__btn" href="#">My cart</a>
+					<a class="products-bottom__btn" href="#">Clear all</a>
+				</div>
+			</div>			
+		</div>
+
+		<!-- Search -->
+		<div class="header-search">	
+			<input class="header-search__input js-header-search__input" type="Search" placeholder="Search...">				
+			<svg class="header-search__icon js-header-search__icon">
+    			<use xlink:href="svg/svg-sprite.svg#search-icon"></use>
+			</svg>
+			<span class="header-search__close js-header-search__close"></span>
+		</div>
+	</div>
+</header>
+<section class="slider-section">	
+	<div class="slider-progress js-slider-progress"></div>
+	
+	<div class="slider js-slider">
+
+		<!-- Slide #1 -->
+		<div class="slide slide_1">
+			<div class="slide-content">
+				<h1 class="slide__title">Smart Moves 
+					<br><small class="slide__title_small">of <span class="slide__title_highlighted">Successful</span> Business</small>
+				</h1>
+				<h2 class="slide__subtitle">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</h2>				
+				<a class="slide__btn slide__btn_buy" href="#">Buy this now</a>
+				<a class="slide__btn slide__btn_preview" href="#">Live Preview</a>
+			</div>	
+		</div>
+
+		<!-- Slide #2 -->
+		<div class="slide slide_2">
+			<div class="slide-content">
+				<h1 class="slide__title">Slide #2 
+					<br><small class="slide__title_small">of <span class="slide__title_highlighted">Successful</span> Business</small>
+				</h1>
+				<h2 class="slide__subtitle">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</h2>				
+				<a class="slide__btn slide__btn_buy" href="#">Buy this now</a>
+				<a class="slide__btn slide__btn_preview" href="#">Live Preview</a>
+			</div>	
+		</div>
+
+		<!-- Slide #3 -->
+		<div class="slide slide_3">
+			<div class="slide-content">
+				<h1 class="slide__title">Slide #3
+					<br><small class="slide__title_small">of <span class="slide__title_highlighted">Successful</span> Business</small>
+				</h1>
+				<h2 class="slide__subtitle">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</h2>				
+				<a class="slide__btn slide__btn_buy" href="#">Buy this now</a>
+				<a class="slide__btn slide__btn_preview" href="#">Live Preview</a>
+			</div>	
+		</div>
+
+		<!-- Slide #4 -->
+		<div class="slide slide_4">
+			<div class="slide-content">
+				<h1 class="slide__title">Slide #4 
+					<br><small class="slide__title_small">of <span class="slide__title_highlighted">Successful</span> Business</small>
+				</h1>
+				<h2 class="slide__subtitle">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</h2>				
+				<a class="slide__btn slide__btn_buy" href="#">Buy this now</a>
+				<a class="slide__btn slide__btn_preview" href="#">Live Preview</a>
+			</div>	
+		</div>
+
+		<!-- Slide #5 -->
+		<div class="slide slide_5">
+			<div class="slide-content">
+				<h1 class="slide__title">Slide #5
+					<br><small class="slide__title_small">of <span class="slide__title_highlighted">Successful</span> Business</small>
+				</h1>
+				<h2 class="slide__subtitle">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</h2>				
+				<a class="slide__btn slide__btn_buy" href="#">Buy this now</a>
+				<a class="slide__btn slide__btn_preview" href="#">Live Preview</a>
+			</div>	
+		</div>
+	</div>
+</section>
+<section class="project-section">
+	
+	<!-- Item #1 -->
+	<div class="project-item">
+		<span class="project-item__logo">
+			<svg class="project-item__icon">
+    			<use xlink:href="svg/svg-sprite.svg#leaf-icon"></use>
+			</svg>
+		</span>
+		<h4 class="project-item__title">Clean Design</h4>
+		<p class="project-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</p>
+	</div>
+
+	<!-- Item #2 -->
+	<div class="project-item">
+		<span class="project-item__logo">
+			<svg class="project-item__icon">
+    			<use xlink:href="svg/svg-sprite.svg#star-icon"></use>
+			</svg>
+		</span>
+		<h4 class="project-item__title">Branding</h4>
+		<p class="project-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+	</div>
+
+	<!-- Item #3 -->
+	<div class="project-item">
+		<span class="project-item__logo">
+			<svg class="project-item__icon">
+    			<use xlink:href="svg/svg-sprite.svg#smartphone-icon"></use>
+			</svg>
+		</span>
+		<h4 class="project-item__title">Responsive</h4>
+		<p class="project-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</p>
+	</div>
+		
+	<!-- Item #4 -->
+	<div class="project-item">
+		<span class="project-item__logo">
+			<svg class="project-item__icon">
+    			<use xlink:href="svg/svg-sprite.svg#gear-icon"></use>
+			</svg>
+		</span>
+		<h4 class="project-item__title">Development</h4>
+		<p class="project-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+	</div>
+</section>
+<section class="work-section">
+	<div class="work-grid">
+
+		<!-- Item main -->
+		<div class="work-grid__item item_main">
+			<h3 class="work-title">See Our Recent Work</h3>
+			<p class="work-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.</p>
+		</div>
+
+		<!-- Item #1 -->
+		<div class="work-grid__item item_1">		
+			<img class="work-grid__img" src="img/work-img-1.jpg" alt="">
+			<h5 class="work-grid__title">Lorem ipsum dolor
+				<small class="work-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>		
+			<a class="work-grid__zoom" data-fancybox data-toolbar="false" href="img/work-img-1-full.jpg">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="work-grid__link" href="#">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #2 -->
+		<div class="work-grid__item item_2">		
+			<img class="work-grid__img" src="img/work-img-2.jpg" alt="">
+			<h5 class="work-grid__title">Lorem ipsum dolor
+				<small class="work-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>		
+			<a class="work-grid__zoom" data-fancybox data-toolbar="false" href="img/work-img-2-full.jpg">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="work-grid__link" href="#">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #3 -->
+		<div class="work-grid__item item_3">
+			<img class="work-grid__img" src="img/work-img-3.jpg" alt="">
+			<h5 class="work-grid__title">Lorem ipsum dolor
+				<small class="work-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>		
+			<a class="work-grid__zoom" data-fancybox data-toolbar="false" href="img/work-img-3-full.jpg">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="work-grid__link" href="#">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #4 -->
+		<div class="work-grid__item item_4">
+			<img class="work-grid__img" src="img/work-img-4.jpg" alt="">
+			<h5 class="work-grid__title">Lorem ipsum dolor
+				<small class="work-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>		
+			<a class="work-grid__zoom" data-fancybox data-toolbar="false" href="img/work-img-4-full.jpg">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="work-grid__link" href="#">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #5 -->
+		<div class="work-grid__item item_5">
+			<img class="work-grid__img" src="img/work-img-5.jpg" alt="">
+			<h5 class="work-grid__title">Claritas Est Processus
+				<small class="work-grid__subtitle">Graphic Designer, Photoshop</small>
+			</h5>		
+			<a class="work-grid__zoom" data-fancybox data-toolbar="false" href="img/work-img-5-full.jpg">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="work-grid__link" href="#">
+				<svg class="work-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+		<a class="work-link" href="#">View All Portfolio »</a>
+	</div>
+</section>
+<section class="design-section">		
+	<div class="design-content">
+		<h3 class="design-title">Fully Responsive Design Ready</h3>
+		<p class="design-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.</p>
+		<ul class="design-list">
+			<li class="design-list__item">Claritas est etiam processus dynamicus.</li>
+			<li class="design-list__item">Mirum est notare quam littera gothica, quam.</li>
+			<li class="design-list__item">Nam liber tempor cum soluta.</li>
+			<li class="design-list__item">Duis autem vel eum iriure dolor in hendrerit.</li>
+			<li class="design-list__item">Typi non habent claritatem insitam.</li>
+		</ul>
+		<a class="design-btn" href="#">Buy this now</a>
+	</div>
+	<div class="design-screens">
+		<img class="design-screens__img" src="img/design-screens.png" alt="">
+	</div>	
+</section>
+<section class="skill-section">
+	<div class="skill-text">
+		<h3 class="skill-title">Our Skills</h3>
+		<p class="skill-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+		<a class="skill-btn" href="#">Our services</a>
+	</div>	
+
+	<div class="skill-items">
+
+		<!-- Item #1 -->
+		<div class="skill-item">
+			<p class="skill-item__name">Photoshop</p>
+			<span class="skill-item__line photoshop js-skill-item__line"></span>
+			<span class="skill-item__number photoshop js-skill-item__number">95%</span>
+		</div>
+
+		<!-- Item #2 -->
+		<div class="skill-item">
+			<p class="skill-item__name">WordPress</p>
+			<span class="skill-item__line wordpress js-skill-item__line"></span>
+			<span class="skill-item__number wordpress js-skill-item__number">50%</span>
+		</div>
+
+		<!-- Item #3 -->
+		<div class="skill-item">
+			<p class="skill-item__name">eCommerce</p>
+			<span class="skill-item__line ecommerce js-skill-item__line"></span>
+			<span class="skill-item__number ecommerce js-skill-item__number">72%</span>
+		</div>
+
+		<!-- Item #4 -->
+		<div class="skill-item">
+			<p class="skill-item__name">Photography</p>
+			<span class="skill-item__line photography js-skill-item__line"></span>
+			<span class="skill-item__number photography js-skill-item__number">36%</span>
+		</div>
+	</div>
+	<div class="js-skill__animation-trigger"></div>
+</section>
+<section class="portfolio-section">
+	<h3 class="portfolio-title">Our Portfolio</h3>
+	<p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+ 	<div class="portfolio-nav js-portfolio-nav">
+ 		<h4 class="portfolio-nav__title">Sort Portfolios:</h4>
+ 		<nav class="portfolio-nav__btn-group">
+			<button class="portfolio-nav__btn portfolio-nav__btn_active" type="button" data-filter="*">All</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-websites">Websites</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-logo">Logo</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-design">Graphic Design</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-development">Development</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-video">Video</button>
+			<button class="portfolio-nav__btn" type="button" data-filter=".portfolio-photography">Photography</button>	
+		</nav>	
+	</div>
+
+	<div class="portfolio-grid js-portfolio-grid">
+	
+		<!-- Item #1 -->
+		<div class="portfolio-grid__item portfolio-design portfolio-photography">
+			<img class="portfolio-grid__img" src="img/portfolio-img-1.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>		
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-1-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #2 -->
+		<div class="portfolio-grid__item portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-2.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-2-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #3 -->
+		<div class="portfolio-grid__item portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-3.jpg" alt="">
+			<h5 class="portfolio-grid__title">Claritas Est Processus
+				<small class="portfolio-grid__subtitle">Graphic Designer, Photoshop</small>
+			</h5>			
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-3-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #4 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-4.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet, consectetur</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-4-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #5 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-photography portfolio-video">
+			<img class="portfolio-grid__img" src="img/portfolio-img-5.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-5-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #6 -->
+		<div class="portfolio-grid__item portfolio-logo portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-6.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-6-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #7 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-7.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-7-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #8 -->
+		<div class="portfolio-grid__item portfolio-photography portfolio-video">
+			<img class="portfolio-grid__img" src="img/portfolio-img-8.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-8-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #9 -->
+		<div class="portfolio-grid__item portfolio-design portfolio-websites">
+			<img class="portfolio-grid__img" src="img/portfolio-img-9.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet, consectetur
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-9-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #10 -->
+		<div class="portfolio-grid__item portfolio-design portfolio-photography">
+			<img class="portfolio-grid__img" src="img/portfolio-img-10.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsumdolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-10-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #11 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-development portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-11.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-11-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #12 -->
+		<div class="portfolio-grid__item portfolio-logo portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-12.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-12-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #13 -->
+		<div class="portfolio-grid__item portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-13.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet, consectetur
+				<small class="portfolio-grid__subtitle">Lorem ipsumdolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-13-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #14 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-development portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-14.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-14-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #15 -->
+		<div class="portfolio-grid__item portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-15.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsumdolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-15-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #16 -->
+		<div class="portfolio-grid__item portfolio-logo portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-16.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet, consectetur
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-16-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #17 -->
+		<div class="portfolio-grid__item portfolio-websites portfolio-logo portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-17.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsum dolor sit amet, consectetur</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-17-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #18 -->
+		<div class="portfolio-grid__item portfolio-design portfolio-photography">
+			<img class="portfolio-grid__img" src="img/portfolio-img-18.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsumdolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-18-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>	
+
+		<!-- Item #19 -->
+		<div class="portfolio-grid__item portfolio-logo">
+			<img class="portfolio-grid__img" src="img/portfolio-img-19.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor sit amet
+				<small class="portfolio-grid__subtitle">Lorem ipsum</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-19-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Item #20 -->
+		<div class="portfolio-grid__item portfolio-design">
+			<img class="portfolio-grid__img" src="img/portfolio-img-20.jpg" alt="">
+			<h5 class="portfolio-grid__title">Lorem ipsum dolor
+				<small class="portfolio-grid__subtitle">Lorem ipsumdolor sit</small>
+			</h5>
+			<a class="portfolio-grid__zoom" data-fancybox data-toolbar="false" href="../img/portfolio-img-20-full.jpg">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#enlarge-icon"></use>
+				</svg>
+			</a>
+			<a class="portfolio-grid__link" href="#">
+				<svg class="portfolio-grid__icon">
+    				<use xlink:href="svg/svg-sprite.svg#link-icon"></use>
+				</svg>
+			</a>
+		</div>																							
+	</div>		
+</section>
+<section class="choose-section">
+	<div class="choose-text">
+		<h3 class="choose-title">Why Choose Us</h3>
+		<p class="choose-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+	</div>
+	
+	<!-- Accordion -->
+	<div class="choose-accordions js-choose-accordions">
+
+		<!-- Item #1 -->
+		<div class="choose-accordion js-choose-accordion">
+			<div class="choose-accordion__header js-choose-accordion__header">
+				<h4 class="choose-accordion__title">Our Solution</h4>
+				<p class="choose-accordion__subtitle">Consectetuer adipiscing sed diam nonummy</p>
+				<a class="choose-accordion__arrow js-choose-accordion__arrow">
+					<svg class="choose-accordion__icon">
+    					<use xlink:href="svg/svg-sprite.svg#arrow-icon"></use>
+					</svg>
+				</a>							
+			</div>
+			<div class="choose-accordion__content js-choose-accordion__content">
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, temporibus quas qui voluptatum! Quod ut quibusdam deserunt labore. Accusamus incidunt non accusantium eveniet, soluta provident. Odio autem, quibusdam nesciunt ad.</p>
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae culpa repellat iste, earum ullam delectus! At eveniet dicta quis quae, ex voluptates doloribus atque debitis tenetur corporis dolorum perspiciatis repudiandae cumque facilis nobis. Iure molestiae, magni aut dolores sint omnis placeat repellat nobis asperiores incidunt accusantium aliquid quo eveniet officia.</p>
+			</div>					
+		</div>
+
+		<!-- Item #2 -->
+		<div class="choose-accordion js-choose-accordion">
+			<div class="choose-accordion__header js-choose-accordion__header">
+				<h4 class="choose-accordion__title">Our Mission</h4>
+				<p class="choose-accordion__subtitle">Eodem modo typi qui nunc nobis</p>
+				<a class="choose-accordion__arrow js-choose-accordion__arrow">
+					<svg class="choose-accordion__icon">
+    					<use xlink:href="svg/svg-sprite.svg#arrow-icon"></use>
+					</svg>
+				</a>						
+			</div>
+			<div class="choose-accordion__content js-choose-accordion__content">
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nihil enim omnis eos mollitia alias provident modi necessitatibus debitis, ex nulla obcaecati ipsum vitae aliquam molestias, delectus eligendi corrupti soluta deserunt, beatae aspernatur laudantium natus qui sit laborum. Modi, eaque.</p>
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nulla repellendus nesciunt. Esse nisi, doloribus distinctio, enim nostrum quas cum.</p>		
+			</div>			
+		</div>		
+
+		<!-- Item #3 -->
+		<div class="choose-accordion js-choose-accordion">
+			<div class="choose-accordion__header js-choose-accordion__header">
+				<h4 class="choose-accordion__title">Our Technology</h4>
+				<p class="choose-accordion__subtitle">Duis autem vel iriure dolor in hendrerit</p>
+				<a class="choose-accordion__arrow js-choose-accordion__arrow">
+					<svg class="choose-accordion__icon">
+    					<use xlink:href="svg/svg-sprite.svg#arrow-icon"></use>
+					</svg>
+				</a>						
+			</div>
+			<div class="choose-accordion__content js-choose-accordion__content">
+				<p class="choose-accordion__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.</p>
+				<p class="choose-accordion__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+			</div>					
+		</div>	
+
+		<!-- Item #4 -->
+		<div class="choose-accordion js-choose-accordion">
+			<div class="choose-accordion__header js-choose-accordion__header">
+				<h4 class="choose-accordion__title">Our Specification</h4>
+				<p class="choose-accordion__subtitle">Adipiscing sed diam nonummy</p>
+				<a class="choose-accordion__arrow js-choose-accordion__arrow">
+					<svg class="choose-accordion__icon">
+    					<use xlink:href="svg/svg-sprite.svg#arrow-icon"></use>
+					</svg>
+				</a>							
+			</div>
+			<div class="choose-accordion__content js-choose-accordion__content">
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, eum amet sed architecto, unde minus at, dignissimos illum velit qui labore tempora nesciunt sapiente soluta quos. Repellendus, mollitia.</p>
+				<p class="choose-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fuga, labore eum quasi culpa, nostrum asperiores aut porro nobis earum. Quo suscipit dicta nobis mollitia voluptas, ad et dolorem. Necessitatibus libero et nisi aspernatur. Tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, quam.</p>				
+			</div>
+		</div>	
+	</div>
+
+	<!-- Slider -->	
+	<div class="choose-slider js-choose-slider">		
+
+		<!-- Slide #1 -->
+		<div class="choose-slide">
+
+			<!-- Slide #1, Post 1/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-3.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quas blanditiis vitae numquam perferendis voluptates repellat voluptas nihil tenetur asperiores?</p>
+				</div>	
+			</div>
+
+			<!-- Slide #1, Post 2/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-4.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla eveniet, eius vel nobis fuga porro sequi eaque at aut incidunt praesentium voluptate suscipit nemo a adipisci esse. Omnis, cupiditate, tempora.</p>
+				</div>	
+			</div>				
+		</div>
+
+		<!-- Slide #2 -->
+		<div class="choose-slide">
+
+			<!-- Slide #2, Post 1/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-1.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Jonathan Smith</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.</p>
+				</div>	
+			</div>
+
+			<!-- Slide #2, Post 2/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-2.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Britney Doe</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.</p>
+				</div>	
+			</div>				
+		</div>
+
+		<!-- Slide #3 -->
+		<div class="choose-slide">
+
+			<!-- Slide #3, Post 1/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-5.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, id aut illo! Voluptates impedit delectus reiciendis facilis, repellat cupiditate praesentium dolore rem velit accusamus, omnis quam perspiciatis.</p>
+				</div>	
+			</div>
+
+			<!-- Slide #3, Post 2/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-6.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex iste cupiditate vitae illo, doloremque quasi.</p>
+				</div>	
+			</div>				
+		</div>	
+
+		<!-- Slide #4 -->
+		<div class="choose-slide">
+
+			<!-- Slide #4, Post 1/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-7.png" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero labore mollitia non nostrum, obcaecati voluptatibus, iusto nisi necessitatibus quis possimus est expedita assumenda.</p>
+				</div>	
+			</div>
+
+			<!-- Slide #4, Post 2/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-8.png" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eligendi in, corporis architecto rem ratione laboriosam beatae esse deserunt deleniti incidunt reprehenderit ab magnam fugit amet porro obcaecati repudiandae?</p>
+				</div>	
+			</div>				
+		</div>
+
+		<!-- Slide #5 -->
+		<div class="choose-slide">
+
+			<!-- Slide #5, Post 1/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-9.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptatum assumenda tenetur ipsam repellat, impedit saepe sunt non ratione velit vel maxime ab similique suscipit molestiae consectetur obcaecati asperiores placeat omnis, at.</p>
+				</div>	
+			</div>
+
+			<!-- Slide #5, Post 2/2 -->
+			<div class="choose-post">
+				<img class="choose-post__img" src="img/choose-img-10.jpg" alt="">
+				<div class="choose-post__text">
+					<h5 class="choose-post__title">Lorem ipsum</h5>
+					<a class="choose-post__link" href="http://www.themeforest.net">www.themeforest.net</a>
+					<p class="choose-post__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quia porro, asperiores enim, aliquid nobis recusandae earum a doloribus, minus nulla, est eaque fugiat numquam.</p>
+				</div>	
+			</div>				
+		</div>											
+	</div>	
+</section>
+<section class="blog-section">
+	<div class="blog-grid">
+
+		<!-- Grid small -->
+		<div class="blog-grid_small">	
+			
+			<!-- Item main -->
+			<div class="blog-grid__item item_main">
+				<h3 class="blog-title">Latest Blog Posts</h3>
+				<p class="blog-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum nobis videntur parum.</p>
+			</div>
+
+			<!-- Item #1 -->
+			<div class="blog-grid__item item_1">
+				<img class="blog-grid__img" src="img/blog-img-1.jpg" alt="">
+				<span class="blog-grid__theme">
+					<svg class="blog-grid__icon">
+    					<use xlink:href="svg/svg-sprite.svg#photo-icon"></use>
+					</svg>
+				</span>	
+				<div class="blog-grid__text">
+					<a class="blog-grid__title" href="#">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium</a>
+					<p class="blog-grid__info">04 February 2015, Posted by <span class="blog-grid__author">John Doe</span>, Comments: <span class="blog-grid__comment">26</span>
+					</p>
+				</div>	
+			</div>
+		</div>
+		
+		<!-- Grid large -->
+		<div class="blog-grid_large">
+
+			<!-- Item #2 -->
+			<div class="blog-grid__item item_2">
+				<img class="blog-grid__img" src="img/blog-img-2.jpg" alt="">
+				<span class="blog-grid__theme">
+					<svg class="blog-grid__icon">
+    					<use xlink:href="svg/svg-sprite.svg#landscape-icon"></use>
+					</svg>
+				</span>	
+				<div class="blog-grid__text">
+					<a class="blog-grid__title blog-grid__title_large" href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
+					<p class="blog-grid__info">04 February 2015, Posted by <span class="blog-grid__author">Admin</span>, Comments: <span class="blog-grid__comment">26</span>
+					</p>
+				</div>	
+			</div>		
+
+			<!-- Item #3 -->
+			<div class="blog-grid__item item_3">
+				<img class="blog-grid__img" src="img/blog-img-3.jpg" alt="">
+				<span class="blog-grid__theme">
+					<svg class="blog-grid__icon">
+    					<use xlink:href="svg/svg-sprite.svg#photo-icon"></use>
+					</svg>
+				</span>	
+				<div class="blog-grid__text">
+					<a class="blog-grid__title" href="#">Nam liber tempor cum soluta</a>
+					<p class="blog-grid__info">04 February 2015, Posted by <span class="blog-grid__author">John Doe</span>, Comments: <span class="blog-grid__comment">26</span>
+					</p>
+				</div>	
+			</div>
+
+			<!-- Item #4 -->
+			<div class="blog-grid__item item_4">
+				<img class="blog-grid__img" src="img/blog-img-4.jpg" alt="">
+				<span class="blog-grid__theme">
+					<svg class="blog-grid__icon">
+    					<use xlink:href="svg/svg-sprite.svg#movie-icon"></use>
+					</svg>
+				</span>	
+				<div class="blog-grid__text">
+					<a class="blog-grid__title" href="#">Duis autem vel eum iriure</a>
+					<p class="blog-grid__info">04 February 2015, Posted by <span class="blog-grid__author">Admin</span>, Comments: <span class="blog-grid__comment">26</span>
+					</p>
+				</div>	
+			</div>
+			<a class="blog-link" href="#">Read All Posts »</a>
+		</div>		
+	</div>	
+</section>
+<section class="about-section">	
+	<h3 class="about-title">Some Interesting Stuff About Us</h3>
+	<p class="about-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+	<div class="js-about__animation-trigger"></div>
+	
+	<div class="about-items js-about-items">
+
+		<!-- Item #1 -->
+		<div class="about-item">		
+			<div class="about-item__counter js-about-item__counter_client">
+				<span class="about-item__number js-about-item__number">1024</span>
+			</div>
+			<h4 class="about-item__title">Satisfied Clients</h4>
+			<p class="about-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</p>
+		</div>
+
+		<!-- Item #2 -->
+		<div class="about-item">
+			<div class="about-item__counter js-about-item__counter_project">
+				<span class="about-item__number js-about-item__number">549</span>
+			</div>
+			<h4 class="about-item__title">Completed Projects</h4>
+			<p class="about-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+		</div>
+
+		<!-- Item #3 -->
+		<div class="about-item">
+			<div class="about-item__counter js-about-item__counter_like">
+				<span class="about-item__number js-about-item__number">768</span>
+			</div>
+			<h4 class="about-item__title">Likes on Average</h4>
+			<p class="about-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</p>
+		</div>
+		
+		<!-- Item #4 -->
+		<div class="about-item">
+			<div class="about-item__counter js-about-item__counter_launch">
+				<span class="about-item__number js-about-item__number">333</span>
+			</div>
+			<h4 class="about-item__title">We Launched</h4>
+			<p class="about-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+		</div>
+	</div>		
+</section>
+<section class="theme-section">
+	<div class="theme-content">
+		<h3 class="theme-title">Many Theme Options</h3>
+		<p class="theme-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+		<div class="theme-items">
+		
+			<!-- Item #1 -->
+			<div class="theme-item">
+				<span class="theme-item__logo">
+					<svg class="theme-item__icon">
+    					<use xlink:href="svg/svg-sprite.svg#leaf-icon"></use>
+					</svg>
+				</span>
+				<h4 class="theme-item__title">Clean Design</h4>
+				<p class="theme-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing diam.</p>
+			</div>
+
+			<!-- Item #2 -->
+			<div class="theme-item">
+				<span class="theme-item__logo">
+					<svg class="theme-item__icon">
+    				<use xlink:href="svg/svg-sprite.svg#bag-icon"></use>
+					</svg>
+				</span>
+				<h4 class="theme-item__title">Multipurpose</h4>
+				<p class="theme-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate esse.</p>
+			</div>	
+
+			<!-- Item #3 -->
+			<div class="theme-item">
+				<span class="theme-item__logo">
+					<svg class="theme-item__icon">
+    					<use xlink:href="svg/svg-sprite.svg#smartphone-icon"></use>
+					</svg>
+				</span>
+				<h4 class="theme-item__title">Ultra Responsive</h4>
+				<p class="theme-item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing diam.</p>
+			</div>
+
+			<!-- Item #4 -->
+			<div class="theme-item">
+				<span class="theme-item__logo">
+					<svg class="theme-item__icon">
+    					<use xlink:href="svg/svg-sprite.svg#chat-icon"></use>
+					</svg>
+				</span>
+				<h4 class="theme-item__title">Online Support</h4>
+				<p class="theme-item__text">Duis autem vel eum iriure dolor in hendrerit in vulputate esse.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="theme-screens">
+		<img class="theme-screens__img" src="img/theme-screens.png" alt="">
+	</div>	
+</section>
+<section class="client-section">
+	<h3 class="client-title">Our Happy Clients</h3>
+	<p class="client-subtitle">Lorem ipsum dolor sit amet, consectegtttuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.</p>	
+	
+	<!-- Slider -->
+	<div class="client-slider js-client-slider">
+
+		<!-- Slide #1 -->
+		<div class="client-slide">
+			<a class="client-slide__link" href="#">
+				<img class="client-slide__img" src="img/client-logo-1.png" alt="">
+			</a>
+		</div>
+
+		<!-- Slide #2 -->
+		<div class="client-slide">
+			<a class="client-slide__link" href="#">
+				<img class="client-slide__img" src="img/client-logo-2.png" alt="">
+			</a>
+		</div>
+
+		<!-- Slide #3 -->
+		<div class="client-slide">
+			<a class="client-slide__link" href="#">
+				<img class="client-slide__img" src="img/client-logo-3.png" alt="">
+			</a>
+		</div>
+
+		<!-- Slide #4 -->
+		<div class="client-slide">
+			<a class="client-slide__link" href="#">
+				<img class="client-slide__img" src="img/client-logo-4.png" alt="">
+			</a>
+		</div>
+		
+		<!-- Slide #5 -->
+		<div class="client-slide">
+			<a class="client-slide__link" href="#">
+				<img class="client-slide__img" src="img/client-logo-5.png" alt="">
+			</a>
+		</div>
+	</div>	 	
+</section>
+<div class="buy-section">
+	<h3 class="buy-title">Universal PSD Template for Your Projects</h3>
+	<p class="buy-subtitle">Don't Forget to rate the Template. Thanks so much!</p>
+	<a class="buy-btn" href="#">Buy This Now</a>
+</div>
+<footer class="footer">
+
+	<!-- About us block -->
+	<div class="footer-about">		
+		<h4 class="footer-about__title">About Us</h4>
+		<p class="footer-about__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
+		<a class="footer-about__link" href="#">Read More »</a>
+		<p class="footer-about__email">Email Newsletters:</p>
+		<form class="footer-about__email-form">
+			<input class="footer-about__input" type="email" placeholder="Email Address" required="">
+			<button class="footer-about__submit-btn" type="submit">
+				<svg class="footer-about__icon">
+    				<use xlink:href="svg/svg-sprite.svg#envelope-icon"></use>
+				</svg>
+			</button>
+		</form>
+		<a class="footer-about__policy" href="#">Privacy Policy</a>
+	</div>
+
+	<!-- Latest news block -->
+	<div class="footer-news">					
+		<h4 class="footer-news__title">Latest News</h4>
+
+		<!-- Item #1 -->
+		<div class="footer-news__item">
+			<div class="footer-news__date">
+				<span class="footer-news__date-day">04</span>
+				<span class="footer-news__date-month">Feb</span>
+			</div>
+			<div class="footer-news__text">
+				<a class="footer-news__link" href="#">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium</a>
+				<a class="footer-news__comments" href="#"><span class="footer-news__comment">26</span> Comments</a>
+			</div>	
+		</div>
+
+		<!-- Item #2 -->
+		<div class="footer-news__item">
+			<div class="footer-news__date">
+				<span class="footer-news__date-day">28</span>
+				<span class="footer-news__date-month">Jan</span>
+			</div>
+			<div class="footer-news__text">
+				<a class="footer-news__link" href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</a>
+				<a class="footer-news__comments" href="#">No Comments</a>
+			</div>	
+		</div>
+		
+		<!-- Item #3 -->
+		<div class="footer-news__item">
+			<div class="footer-news__date">
+				<span class="footer-news__date-day">03</span>
+				<span class="footer-news__date-month">Jan</span>
+			</div>
+			<div class="footer-news__text">
+				<a class="footer-news__link" href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis</a>
+				<a class="footer-news__comments" href="#"><span class="footer-news__comment">3</span> Comments</a>
+			</div>	
+		</div>		
+	</div>
+
+	<!-- Get in touch block -->
+	<div class="footer-contact">
+		<h4 class="footer-contact__title">Get In Touch</h4>
+
+		<!-- Item #1 -->
+		<div class="footer-contact__item">
+			<p class="footer-contact__name address">Address:</p>
+			<p class="footer-contact__text address">795 South Park Avenue, Door 6 Wonderland, CA 94107, Australia</p>
+		</div>
+			
+		<!-- Item #2 -->
+		<div class="footer-contact__item">
+			<p class="footer-contact__name">Phone:</p>
+			<p class="footer-contact__text">
+				<a class="footer-contact__link" href="tel:+440 875369208">+440 875369208</a>
+				<span class="footer-contact__subname">- Office</span>
+				<br>			
+				<a class="footer-contact__link" href="tel:+440 353363114">+440 353363114</a>
+				<span class="footer-contact__subname">- Fax</span>
+			</p>				
+		</div>
+			
+		<!-- Item #3 -->
+		<div class="footer-contact__item">
+			<p class="footer-contact__name">Email:</p>
+			<p class="footer-contact__text">
+				<a class="footer-contact__link" href="mailto:support@sitename.com?Subject=Need%20help">support@sitename.com</a>
+				<br>
+				<a class="footer-contact__link" href="mailto:info@sitename.com?Subject=Need%20indo">info@sitename.com</a>
+			</p>
+		</div>
+			
+		<!-- Item #4 -->
+		<div class="footer-contact__item">
+			<p class="footer-contact__name">Follow Us:</p>
+			<ul class="footer-contact__icons">
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#facebook-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#twitter-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#tumblr-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#linkedin-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#google-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#vimeo-icon"></use>
+						</svg>
+					</a>
+				</li> 
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#pinterest-icon"></use>
+						</svg>
+					</a>
+				</li> 				
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#flickr-icon"></use>
+						</svg>
+					</a>
+				</li>				
+				<li>
+					<a class="footer-contact__link" href="#">
+						<svg class="footer-contact__icon">
+    						<use xlink:href="svg/svg-sprite.svg#rss-icon"></use>
+						</svg>
+					</a>
+				</li> 
+			</ul>		
+		</div>
+	</div>
+
+	<!-- Footer bottom line -->
+	<div class="footer-bottom">
+		<p class="footer-bottom__copyright">© 2015 èxe, Design by <a class="footer-bottom__copyright-link" href="#">ThemeFire</a>   /   Only for <a class="footer-bottom__copyright-link" href="#">Envato Market</a>
+		</p>
+		<nav class="footer-nav">
+			<a class="footer-nav__item" href="#">Home</a>
+			<a class="footer-nav__item" href="#">About Us</a>
+			<a class="footer-nav__item" href="#">Pages</a>
+			<a class="footer-nav__item" href="#">Features</a>
+			<a class="footer-nav__item" href="#">Portfolio</a>
+			<a class="footer-nav__item" href="#">Blog</a>
+			<a class="footer-nav__item" href="#">Shop</a>
+			<a class="footer-nav__item" href="#">Contact Us</a>
+		</nav>
+	</div>
+</footer>
+<button class="to-top js-to-top">
+	<svg class="to-top__icon">
+    	<use xlink:href="svg/svg-sprite.svg#arrow-icon"></use>
+	</svg>
+</button>
+</div>
+
+<!-- adding main.min.js file -->
+<script src="js/main.min.js"></script>	
+</body>
+</html>

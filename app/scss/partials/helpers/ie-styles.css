@@ -1,0 +1,47 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+	
+	/* Header */
+	.header-lang__link{
+		padding-top: 14px;
+	}	
+
+	.header-wishlist__icon,
+	.header-wishlist__name,
+	.header-wishlist__item{
+		transform: translate(0, 13px);
+	}
+
+	.header-nav{
+		padding-top: 15px;
+	}
+	
+	.header-cart__btn{
+		transform: translate(0, 7px);
+	}
+
+	.header-cart__counter{
+		line-height: 170%;
+	}
+
+	/* Work */
+	.work-grid__item:hover{
+		outline: none;		
+	}
+
+	/* Portfolio */
+	.portfolio-nav__btn{
+		margin-top: 20px;
+	}
+
+	/* Blog */
+	.blog-grid__item:hover{
+		outline: none;		
+	}
+
+	/* Footer */
+	.footer-about,
+	.footer-news,
+	.footer-contact{
+		width: 100%;
+	}
+}

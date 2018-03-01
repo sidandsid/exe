@@ -1,0 +1,233 @@
+.skill-section{
+	padding: 110px 5% 40px 5%;	
+	background-color: $accent-color;
+
+	@include break(tablet-l){
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;		
+	}
+}
+
+.skill-text{	
+	margin-bottom: 40px;
+	@include break(tablet-l){
+		max-width: 290px;	
+	}
+}
+
+.skill-title{
+	@extend %title-left;
+
+	&:before{
+		background-color: #ffffff;
+	}
+}
+
+.skill-subtitle{
+	@extend %subtitle-left;
+	color: #ffffff;
+	width: 90%;
+}
+
+.skill-btn{
+	@extend %btn;
+	background-color: $bg-color;
+	border: 2px solid $bg-color;
+	margin-top: 40px;
+	@include hover-btn(#ffffff, transparent);	
+}
+
+.skill-items{	
+	@include break(tablet-l){
+		width: 60%;
+		max-width: 770px;
+		margin: 0 1.5% 0 6.5%;						
+	}	
+}
+
+.skill-item{
+	position: relative;
+
+	&__name{
+		@include font(14px, bold, #ffffff, $font-b);	
+		text-transform: uppercase;	
+		margin-bottom: 10px;		
+	}
+}	
+
+/* Skill progress lines and animation */
+.skill-item__line{
+	position: relative;
+	display: block;
+	@include size(100%, 10px);
+	border: 1px solid rgba(255, 255, 255, .5);
+	border-radius: 3px;
+	margin-bottom: 20px;
+
+	&:before{
+		@extend %absolute;
+		background-color: #ffffff;
+		left: 2px;
+		top: 2px;
+	}	
+
+	&.photoshop{	
+		@media screen and (max-width: 768px){
+			&:before{
+				@include size(93.5%, 4px);
+			}
+		}
+
+		&.animated{		
+			&:before{
+				height: 4px;				
+				@include animation(photoshop-line, 1.5s, ease-in-out, 1);
+				@keyframes photoshop-line{
+					0%{	width: 0%; }
+					70%{ width: 98%; }		
+					100%{ width: 93.5%;}
+				}
+			}		
+		}
+	}	
+
+	&.wordpress{	
+		@media screen and (max-width: 768px){
+			&:before{
+				@include size(50%, 4px);
+			}
+		}
+
+		&.animated{		
+			&:before{
+				height: 4px;				
+				@include animation(wordpress-line, 1.5s, ease-in-out, 1);
+				@keyframes wordpress-line{
+					0%{	width: 0%; }
+					70%{ width: 55%; }		
+					100%{ width: 50%;}
+				}
+			}		
+		}
+	}	
+
+	&.ecommerce{	
+		@media screen and (max-width: 768px){
+			&:before{
+				@include size(70.5%, 4px);
+			}
+		}
+
+		&.animated{		
+			&:before{
+				height: 4px;				
+				@include animation(ecommerce-line, 1.5s, ease-in-out, 1);
+				@keyframes ecommerce-line{
+					0%{	width: 0%; }
+					70%{ width: 77%; }		
+					100%{ width: 70.5%;}
+				}
+			}		
+		}
+	}
+
+	&.photography{	
+		@media screen and (max-width: 768px){
+			&:before{
+				@include size(42%, 4px);
+			}
+		}
+
+		&.animated{		
+			&:before{
+				height: 4px;				
+				@include animation(photography-line, 1.5s, ease-in-out, 1);
+				@keyframes photography-line{
+					0%{	width: 0%; }
+					70%{ width: 40%; }		
+					100%{ width: 34%;}
+				}
+			}		
+		}
+	}
+}	
+
+/* Skill progress numbers and animation */
+.skill-item__number{
+	position: absolute;
+	top: -2px;
+	padding: 3px 5px 2px 5px;
+	background-color: $bg-color;
+	border-radius: 3px;
+	@include font(11px, bold, #ffffff, $font-text);
+	@include break(tablet-m){ opacity: 0; }
+
+	&:after{
+		@extend %absolute-center;
+		content: '';
+		bottom: -3px;
+		@include size(0px, 0px);
+		@include border(solid, 3px 3px 0 3px, $bg-color transparent transparent transparent);		
+	}
+
+	&.photoshop{	
+		@media screen and (max-width: 768px){ left: 89%; }	
+	
+		&.animated{	
+			opacity: 1;		
+			@include animation(photoshop-number, 1.5s, ease-in-out, 1);
+			@keyframes photoshop-number{
+				0%{	left: 15%; }
+				70%{ left: 97%; }		
+				100%{ left: 91.7%; }
+			}
+		}	
+	}
+
+	&.wordpress{	
+		@media screen and (max-width: 768px){ left: 46%; }	
+	
+		&.animated{	
+			opacity: 1;		
+			@include animation(wordpress-number, 1.5s, ease-in-out, 1);
+			@keyframes wordpress-number{
+				0%{	left: 15%; }
+				70%{ left: 54%; }		
+				100%{ left: 48%; }
+			}
+		}	
+	}
+
+	&.ecommerce{	
+		@media screen and (max-width: 768px){ left: 67%; }	
+	
+		&.animated{	
+			opacity: 1;		
+			@include animation(ecommerce-number, 1.5s, ease-in-out, 1);
+			@keyframes ecommerce-number{
+				0%{	left: 15%; }
+				70%{ left: 75%; }		
+				100%{ left: 68.5%; }
+			}
+		}	
+	}
+
+	&.photography{	
+		@media screen and (max-width: 768px){ left: 39%; }	
+
+		&.animated{	
+			opacity: 1;		
+			@include animation(photography-number, 1.5s, ease-in-out, 1);
+			@keyframes photography-number{
+				0%{	left: 15%; }
+				70%{ left: 37%; }		
+				100%{ left: 32%; }
+			}
+		}	
+	}
+}	
+
+.js-skill-animation{
+	@include size(100%, 0);	
+}

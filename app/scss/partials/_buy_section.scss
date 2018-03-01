@@ -1,0 +1,49 @@
+.buy-section{		
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	min-height: 175px;
+	background-color: $accent-color-secondary;
+	text-transform: uppercase;
+	padding: 52px 5% 28px 5%;	
+	@include break(1700px){ padding-left: 10%; }
+	@include break(1800px){ padding-left: 19.5%; }	
+}
+
+.buy-title{	
+	@include font(28px, bold, #ffffff, $font-eb);
+	@include break(tablet-m){ font-size: 38px; }
+	@include break(laptop-s){ width: 80%; }
+}
+
+.buy-subtitle{	
+	@include font(20px, lighter, #ffffff, $font-l);
+	@include break(tablet-m){ font-size: 24px; }
+	@include break(laptop-s){ width: 80%; }
+}
+
+.buy-btn{
+	@extend %btn;	
+	min-width: 170px;
+	font-size: 14px;
+	background-color: $bg-color;
+	border: 2px solid $bg-color;
+	margin-top: 20px;
+	transition: border-color .3s ease, background-color .3s ease;
+
+	@include hover{
+		border-color: #ffffff;
+		background-color: transparent;
+		transition: border-color .3s ease, background-color .3s ease;
+	}
+
+	@include break(laptop-s){
+		position: absolute;			
+		align-self: flex-end;
+		width: 20%;	
+		top: 50%;
+  		transform: translateY(-50%);
+  		margin-top: 0; 		
+	}
+}

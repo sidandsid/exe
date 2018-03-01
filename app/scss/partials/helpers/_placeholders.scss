@@ -1,0 +1,240 @@
+/* Titles / Fonts */
+%title-center{	
+	position: relative;
+	@include font(30px, bold, #ffffff, $font-b);	
+	text-transform: uppercase;	
+	margin-bottom: 20px;
+	text-align: center;
+
+	&:before{
+		@extend %absolute-center;
+		content: '';
+		@include size(70px, 2px);
+		background-color: #2f2f2f;
+		transform: translate(0px, -25px);		
+	}	
+}
+
+%title-left{	
+	position: relative;
+	@include font(30px, bold, #ffffff, $font-b);	
+	line-height: 90%;
+	text-transform: uppercase;	
+	letter-spacing: 1px;	
+	margin-bottom: 25px;	
+
+	&:before{
+		position: absolute;
+		content: '';
+		left: 0;
+		@include size(70px, 2px);
+		background-color: #2f2f2f;
+		transform: translate(0px, -30px);		
+	}	
+}
+
+%subtitle-center{
+	@include font(14px, normal, $text-color, $font-text);
+	text-align: center;	
+	line-height: 150%;	
+	max-width: 560px;
+	margin: 0 auto;
+}
+
+%subtitle-left{
+	@include font(14px, normal, $text-color, $font-text);
+	line-height: 150%;
+}
+
+%footer-title{
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: $font-b;
+	color: #ffffff;
+	text-align: left;
+	text-transform: uppercase;	
+
+	&:after{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		content: '';
+		@include size(70px, 2px);
+		transform: translate(0px, 25px);
+		background-color: $accent-color;
+	}
+}
+
+%header-item{
+	min-height: 45px;
+	padding: 0 10px;
+	@include flex(row, space-between);		
+}
+
+%header-text{	
+	@include font(13px, normal, #636363, $font-text);
+	transition: color .3s ease;
+}
+
+%more-link{
+	@include font(14px, normal, $accent-color, $font-text);
+}
+
+/* Buttons */
+%btn{
+	display: block;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: $font-eb;
+	color: #ffffff;
+	text-transform: uppercase;
+	@include flex(row, space-around);
+	cursor: pointer;	
+	max-width: 170px;
+	padding: 16px 0;
+}
+
+%btn-clean{
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+%slider-btn{
+	display: block;	
+	background-color: rgba(255, 255, 255, .2);	
+	@include flex(row, center);
+	@include hover-bg(rgba($accent-color, 1));
+}
+
+
+/* Icons */
+%sm-icon{	
+	@include size(16px, 16px);	
+	@include hover-fill($accent-color);	
+}
+
+%header-icon{	
+	fill: #363636;
+	margin-right: 0px;
+	transition: fill .3s ease;
+}
+
+%zoom-round{	
+	position: absolute;
+	display: block;
+	@include flex(row, center);
+	@include size(50px, 50px);
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+%zoom-icon{	
+	position: absolute;
+	display: block;
+	@include flex(row, center);
+	@include size(50px, 50px);
+	background-color: $bg-color;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+%link-icon{	
+	position: absolute;
+	display: block;
+	@include flex(row, center);
+	@include size(50px, 50px);
+	background-color: $accent-color;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+
+/* Additionals */
+%absolute-center{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+%absolute{
+	position: absolute;
+	content: '';
+}
+
+%clearfix{
+  *zoom: 1;
+
+  &:before, &:after{
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/* Grid items */
+%grid-item{
+	position: relative;
+	overflow: hidden;		
+}
+
+%grid-img{
+	position: absolute;
+	display: block;
+	top: 0;
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	transition: opacity .3s ease;
+}
+
+%grid-title{	
+	@include font(24px, bold, #ffffff, $font-b);			
+}
+
+%grid-subtitle{	
+	display: block;		
+	@include font(12px, normal, $text-color-light, $font-text);
+	text-transform: uppercase;
+	padding-top: 20px;
+
+	&:after{
+		@extend %absolute;
+		@include size(70px, 2px);
+		background-color: $accent-color;
+		left: 0;
+		bottom: -30px;
+	}
+}
+
+%grid-icon{
+	@include size(19px, 19px);
+	fill: #ffffff;
+}
+
+%grid-outline{
+	outline: 5px solid transparent;
+	outline-offset: -5px;
+	transition: outline-color .3s ease;	
+}
+
+%grid-hover{
+	&:before{
+		position: absolute;
+		content: '';
+		@include size(calc(100% - 10px), calc(100% - 10px));			
+		top: 5px;
+		left: 5px;
+		background-color: darken($bg-color-dark, 20%);
+		opacity: 0;
+		transition: opacity .3s ease;
+	}
+}

@@ -1,0 +1,63 @@
+.client-section{
+	padding: 105px 5% 115px 5%;
+	background-color: $bg-color-dark;		
+}
+
+.client-title{
+	@extend %title-center;
+}
+
+.client-subtitle{
+	@extend %subtitle-center;	
+}	
+
+.client-slider{
+	width: 80%;
+	max-width: 990px;
+	margin: 40px auto 0 auto;
+
+	/* Adjusting Flickity plugin default arrow controls */
+	.flickity-prev-next-button{
+		@extend %slider-btn;
+		@include size(30px, 30px);
+		border-radius: 3px;
+
+		&.previous{
+			left: -10%;
+		}
+		
+		&.next{
+			right: -8%;
+		}
+
+		& .arrow{			
+			fill: #ffffff;
+		}
+	}
+}
+
+.client-slide{
+	@include size(100%, 120px);
+	@include flex(row, center);
+	@include break(tablet-s){ width: 33%; }
+	@include break(tablet-l){ width: 20%; }
+
+	&__link{
+		display: block;
+		overflow: hidden;		
+	}
+
+	&__img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;	
+		opacity: .3;
+		transition: opacity .3s ease;
+
+		@include hover{
+			opacity: 1;
+			transition: opacity .3s ease;
+		}
+	}	
+}

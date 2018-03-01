@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.*",
+    "normalize.css": "*",
+    "fancybox": "^3.2.5",
+    "isotope": "^3.0.4",
+    "flickity": "^2.0.10",
+    "jquery-circle-progress": "^1.2.2",
+    "svg4everybody": "^2.1.9"
+  }
+}

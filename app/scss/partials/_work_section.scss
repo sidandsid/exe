@@ -1,0 +1,137 @@
+.work-section{
+	padding: 80px 5%;
+	background-color: $bg-color-dark;
+}
+
+.work-title{
+	@extend %title-left;
+	margin-top: 30px;
+}
+
+.work-subtitle{
+	@extend %subtitle-left;
+	max-width: 90%;
+}
+
+.work-grid{		
+	max-width: 1170px;
+	margin: 0 auto;	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include break(tablet-m){ justify-content: flex-start; }	
+	
+	&__item{		
+		min-height: 270px;
+		width: 270px;	
+		@extend %grid-item;
+		background-color: $bg-color-dark;
+
+		@include hover{	
+			outline-color: rgba($accent-color, 1);	
+			transition: outline-color .3s ease;
+
+			&:before{
+				opacity: .7;
+				transition: opacity .3s ease;
+			}
+
+			.work-grid__title,
+			.work-grid__subtitle,
+			.work-grid__zoom,
+			.work-grid__link{
+				opacity: 1;
+				transition: opacity .3s ease;
+			}
+		}
+				
+		&:not(:first-child){
+			@extend %grid-outline;
+			@extend %grid-hover;
+		}
+
+		&.item_main{
+			padding-bottom: 40px;			
+
+			@include break(tablet-m){ 
+				min-height: auto;
+				width: 100%; 
+			}
+
+			@include break(laptop-s){ width: 25.64%; }
+		}
+
+		&.item_1{
+			@include background('work-img-1.jpg');	
+			@include break(tablet-m){ width: 60%; }
+			@include break(laptop-s){ width: 51.25%; }							
+		}
+
+		&.item_2{
+			@include background('work-img-2.jpg');
+			@include break(tablet-m){ width: 40%; }
+			@include break(laptop-s){ width: 23.08%; }
+		}
+
+		&.item_3{
+			@include background('work-img-3.jpg');
+			@include break(tablet-m){ width: 25.64%; }			
+		}
+
+		&.item_4{
+			@include background('work-img-4.jpg');
+			@include break(tablet-m){ width: 37.18%; }			
+		}
+
+		&.item_5{
+			@include background('work-img-5.jpg');
+			@include break(tablet-m){ width: 37.18%; }			
+		}		
+	}		
+	
+	&__title{
+		position: absolute;
+		max-width: 80%;
+		left: 40px;
+		top: 40px;
+		@extend %grid-title;		
+		opacity: 0;		
+		transition: opacity .3s ease;
+	}
+
+	&__subtitle{
+		@extend %grid-subtitle;	
+		opacity: 0;	
+		transition: opacity .3s ease;
+	}
+
+	&__img{		
+		opacity: 0;
+	}
+
+	&__zoom{		
+		@extend %zoom-icon;
+		right: 100px;
+		bottom: 20px;
+	}
+
+	&__link{		
+		@extend %link-icon;
+		right: 40px;
+		bottom: 20px;
+	}
+
+	&__icon{		
+		@extend %grid-icon;
+	}
+}
+
+.work-link{	
+	display: block;
+	width: 270px;
+	padding-top: 60px;
+	@extend %more-link;
+	@include break(600px){
+		width: 100%;
+	}
+}

@@ -1,0 +1,150 @@
+.blog-section{
+	padding: 80px 5%;
+	background-color: $bg-color;
+}
+
+.blog-title{
+	@extend %title-left;
+	margin-top: 30px;
+	@include break(laptop-m){ width: 55%; }	
+}
+
+.blog-subtitle{
+	@extend %subtitle-left;
+}
+
+.blog-grid{	
+	max-width: 1170px;
+	margin: 0 auto;	
+	@include break(tablet-l){
+		display: flex;	
+		flex-direction: row-reverse;
+	}
+
+	&_small{			
+		@include break(tablet-s){
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include break(tablet-l){						
+			width: 34.19%;
+			max-height: 684px;			
+		}
+	}
+
+	&_large{
+		@include break(tablet-s){
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		@include break(tablet-l){ width: 65.81%; }		
+	}
+	
+	&__item{	
+		@extend %grid-item;	
+
+		@include hover{
+			outline-color: $accent-color;
+			transition: outline-color .3s ease;	
+
+			&:before{
+				opacity: .7;
+				transition: opacity .3s ease;
+			}
+
+			.blog-grid__theme{
+				background-color: $accent-color;
+				transition: background-color .3s ease;
+			}		
+		}
+
+		&:not(.item_main){
+			@extend %grid-outline;
+			@extend %grid-hover;
+		}
+
+		&.item_main{
+			padding: 0 5px 20px 20px;	
+			@include break(tablet-s){ width: 45%; }
+			@include break(tablet-l){ @include size(100%, 297px); }
+			@include break(laptop-m){ padding: 0 0 0 30px; }
+		}
+
+		&.item_1{
+			height: 387px;			
+			@include background('blog-img-1.jpg');	
+			@include break(tablet-s){ width: 55%; }
+			@include break(tablet-l){ width: 100%; }	
+		}
+
+		&.item_2{			
+			height: 426px;
+			@include background('blog-img-2.jpg');				
+		}
+
+		&.item_3{
+			height: 258px;
+			@include background('blog-img-3.jpg');
+			@include break(tablet-s){ width: 61.04%; }			
+		}
+
+		&.item_4{
+			height: 258px;
+			@include background('blog-img-4.jpg');
+			@include break(tablet-s){ width:  38.96%; }
+		}						
+	}
+
+	&__img{
+		opacity: 0;			
+	}			
+
+	&__theme{
+		position: absolute;
+		display: block;
+		top: 30px;
+		left: 30px;
+		@include flex(row, center);
+		@include size(40px, 40px);
+		background-color: #000000;
+		transition: background-color .3s ease;
+	}
+
+	&__icon{
+		@extend %grid-icon;
+	}
+
+	&__text{
+		position: absolute;
+		max-width: 85%;	
+		left: 30px;		
+		bottom: 60px;			
+	}
+
+	&__title{
+		@extend %grid-title;
+		text-transform: uppercase;	
+
+		&_large{
+			font-size: 30px;
+		}				
+	}
+
+	&__info{		
+		@extend %grid-subtitle;	
+		padding-top: 15px;			
+	}
+
+	&__author, &__comments{
+		color: #ffffff;
+	}
+}
+
+.blog-link{
+	display: block;
+	width: 100%;
+	padding-top: 60px;
+	@extend %more-link;	
+}

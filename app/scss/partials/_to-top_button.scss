@@ -1,0 +1,25 @@
+.to-top{
+	position: absolute;
+	position: fixed;
+	top: 85vh;
+	right: 5vw;
+	z-index: 1;
+	@include size(50px, 50px);
+	@extend %btn-clean;
+	border-radius: 5px;
+	background-color: #141414;
+
+	&__icon{
+		@include size(17px, 17px);
+		fill: #545454;
+		transform: rotate(-90deg);	
+		transition: fill .3s ease;	
+	}
+
+	@include hover{
+		.to-top__icon{
+			fill: $accent-color;
+			transition: fill .3s ease;
+		}
+	}
+}

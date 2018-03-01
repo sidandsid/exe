@@ -1,0 +1,27 @@
+@import '../../bower_components/normalize.css/normalize';
+@import '../../bower_components/flickity/dist/flickity.min';
+@import '../../bower_components/fancybox/dist/jquery.fancybox';
+
+@import 'partials/helpers/mixins';
+@import 'partials/helpers/variables';
+@import 'partials/helpers/placeholders';
+@import 'partials/helpers/fonts';
+@import 'partials/helpers/global_settings';
+@import 'partials/helpers/ie-styles';
+
+@import 'partials/header_section';
+@import 'partials/slider_section';
+@import 'partials/project_section';
+@import 'partials/client_section';
+@import 'partials/footer_section';
+@import 'partials/portfolio_section';
+@import 'partials/blog_section';
+@import 'partials/theme_section';
+@import 'partials/about_section';
+@import 'partials/choose_section';
+@import 'partials/work_section';
+@import 'partials/design_section';
+@import 'partials/skill_section';
+@import 'partials/buy_section';
+
+@import 'partials/to-top_button';

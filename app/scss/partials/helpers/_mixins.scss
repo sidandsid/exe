@@ -1,0 +1,138 @@
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flex ($flex-direction, $justify-content){
+	display: flex;	
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+}
+
+@mixin background ($img){
+	background-image: url('#{$img-path}/#{$img}');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin font ($font-size, $font-weight, $color, $font-family){
+	font-size: $font-size;
+	font-weight: $font-weight;	
+	color: $color;	
+	font-family: $font-family;
+}
+
+@mixin border ($border-style, $border-width, $border-color){
+	border-style: $border-style;
+	border-width: $border-width;
+	border-color: $border-color;
+	@content;
+}
+
+@mixin hover{
+	@media screen and (min-width: 769px){
+    	&:hover{
+			@content;
+		}
+    }
+}
+
+@mixin hover-btn($b-color, $bg-color){
+	transition: border-color .3s ease, background-color .3s ease;
+	@include hover{
+		border-color: $b-color;
+		background-color: $bg-color;
+		transition: border-color .3s ease, background-color .3s ease;
+	}
+}
+
+@mixin hover-color($color){	
+	transition: color .3s ease;
+	@include hover{
+		color: $color;
+		transition: color .3s ease;
+	}
+}
+
+@mixin hover-fill($color){	
+	transition: fill .3s ease;
+	@include hover{
+		fill: $color;
+		transition: fill .3s ease;
+	}
+}
+
+@mixin hover-bg($color){	
+	transition: background-color .3s ease;
+	@include hover{
+		background-color: $color;
+		transition: background-color .3s ease;
+	}
+}
+
+@mixin animation ($animation-name, $animation-duration, $animation-timing-function, $animation-iteration-count){
+	@media screen and (min-width: 769px){
+    	animation-name: $animation-name;
+    	animation-duration: $animation-duration;
+    	animation-timing-function: $animation-timing-function; 
+    	animation-iteration-count: $animation-iteration-count;
+    	animation-fill-mode: forwards;	 
+    	@content;  
+    }
+}
+
+@mixin caret($border-color){
+	position: absolute;
+	content: '';	
+	@include size(0px, 0px);
+	@include border(solid, 4px 4px 0 4px, $border-color transparent transparent transparent);
+	transition: transform .3s ease, border-color .3s ease;		
+}
+
+/* b r e a k p o i n t s */
+
+@mixin break($point){
+	@media screen and (min-width: $point){
+		@content;
+	}
+
+	@if $point == mobile-s{
+		@media screen and (min-width: 320px){@content;}
+	}
+
+	@else if $point == mobile-m{
+		@media screen and (min-width: 480px){@content;}
+	}
+
+	@else if $point == mobile-l{
+		@media screen and (min-width: 520px){@content;}
+	}
+
+	@else if $point == tablet-s{
+		@media screen and (min-width: 640px){@content;}
+	}
+
+	@else if $point == tablet-m{
+		@media screen and (min-width: 768px){@content;}
+	}
+
+	@else if $point == tablet-l{
+		@media screen and (min-width: 1024px){@content;}
+	}
+
+	@else if $point == laptop-s{
+		@media screen and (min-width: 1200px){@content;}
+	}
+
+	@else if $point == laptop-m{
+		@media screen and (min-width: 1300px){@content;}
+	}
+
+	@else if $point == laptop-l{
+		@media screen and (min-width: 1500px){@content;}
+	}
+}

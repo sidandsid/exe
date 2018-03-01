@@ -1,0 +1,255 @@
+.footer{
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: $bg-color;
+	@include break(1290px){ background-image: linear-gradient(to right, #252525 50%, #1b1b1b 50%); }		
+}
+
+/* About us block */
+.footer-about{			
+	max-width: 430px;	
+	padding: 75px 25px 75px 60px;	
+	background-color: #212121;
+	@include break(1290px){ background-color: $bg-color; }
+
+	&__title{
+		@extend %footer-title;	
+		margin-bottom: 50px;	
+	}
+
+	&__text{
+		@include font(14px, normal, #636363, $font-text);
+		line-height: 140%;	
+		margin-bottom: 20px;	
+	}
+
+	&__link{
+		@include font(14px, normal, $accent-color, $font-text);
+	}
+
+	&__email{
+		@include font(18px, bold, #ffffff, $font-text);
+		margin: 40px 0 20px 0;
+	}
+
+	&__email-form{
+		position: relative;
+		max-width: 270px;	
+		margin-bottom: 15px;	
+	}
+
+	&__input{
+		width: 100%;
+		max-height: 42px;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		background-color: #171717;
+		padding: 15px 15px 15px 20px;
+		@include font(14px, normal, $text-color, $font-text);		
+		transition: box-shadow .5s ease;
+
+		&:focus{
+			box-shadow: 0px 0px 5px 0px rgba(($accent-color), 0.7);
+			transition: box-shadow .5s ease;
+		}
+	}
+
+	&__submit-btn{
+		position: absolute;
+		top: 12px;
+		right: 15px;
+		@include size(25px, 25px);
+		background: none;
+  		@extend %btn-clean;
+	}
+
+	&__icon{
+		@include size(17px, 14px);
+		fill: #363636;
+		margin-bottom: 3px;
+	}
+
+	&__policy{
+		@include font(13px, normal, $text-color, $font-text);
+		@include hover-color($accent-color);
+	}
+}
+
+/* Latest news block */
+.footer-news{	
+	max-width: 430px;
+	padding: 75px 25px 0 30px;		
+	background-color: $bg-color-dark;	
+	
+	&__title{	
+		@extend %footer-title;
+		margin-bottom: 35px;
+	}
+
+	&__item{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;	
+
+		@include hover{
+			.footer-news__date{
+				background-color: $accent-color;
+				transition: background-color .3s ease;
+			}
+
+			.footer-news__date-month{
+				color: #ffffff;
+				transition: color .3s ease;
+			}
+		}	
+
+		&:nth-of-type(even){
+			@include border(solid, 1px 0 1px 0, #2a2a2a);			
+		}			
+	}
+
+	&__date{			
+		@include size(40px, 40px);
+		@include flex(column, center);
+		background-color: #111111;
+		margin-top: 20px;
+		transition: background-color .3s ease;		
+	}
+
+	&__date-day{
+		@include font(18px, bold, #ffffff, $font-text);
+	}
+
+	&__date-month{
+		@include font(10px, bold, #363636, $font-text);
+		text-transform: uppercase;
+		transition: color .3s ease;
+	}
+	
+	&__text{
+		width: 83.5%;
+		margin-top: 15px;
+	}
+
+	&__link{	
+		display: block;			
+		@include font(14px, normal, $text-color-light, $font-text);
+		line-height: 150%;
+		hyphens: auto;
+		margin-bottom: 10px;		
+		transition: color .3s ease;			
+	}
+
+	&__comments{
+		display: block;	
+		@include font(12px, normal, $text-color, $font-text);
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	&__comment{
+		@include font(12px, normal, $accent-color-secondary, $font-text);
+	}	
+}
+
+/* Get in touch block */
+.footer-contact{	
+	max-width: 430px;
+	padding: 75px 50px 0 30px;	
+	background-color: #1b1b1b;
+
+	&__title{
+		@extend %footer-title;
+		margin-bottom: 35px;
+	}
+
+	&__item{	
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;	
+		padding: 20px 0 15px 0;
+
+		&:not(:last-child){
+			@include border(solid, 0 0 1px 0, $bg-color);
+		}		
+	}
+	
+	&__name{		
+		@include font(14px, normal, #636363, $font-text);		
+	}
+
+	&__text{	
+		width: 70%;	
+		@include font(14px, normal, $text-color-light, $font-text);
+		line-height: 140%;			
+		
+		&:not(.address){
+			@include hover-color($accent-color);
+		}
+	}
+
+	&__link{
+		@include font(14px, normal, $text-color-light, $font-text);	
+		
+		&:not(.address){
+			@include hover-color($accent-color);
+		}
+	}
+
+	&__subname{
+		@include font(13px, normal, #636363, $font-text);
+	}
+
+	&__icons{
+		display: block;		
+		width: 70%;	
+		display: flex;		
+	}
+
+	&__icon{
+		margin: 0 6px 2px 0;
+		@extend %sm-icon;
+		fill: #464646;	
+	}
+}
+
+/* Footer bottom line */
+.footer-bottom{
+	width: 100%;
+	padding: 24px 6.5%;
+	background-color: #111111; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-transform: uppercase;
+	@include break(1600px){	padding: 0 19.5%; }
+}
+
+.footer-bottom__copyright{
+	@include font(12px, normal, $text-color, $font-text);
+	margin: 10px 30px 10px 0;	
+
+	&-link{
+		@include font(12px, normal, $text-color-light, $font-text);
+		@include hover-color($accent-color-secondary);
+	}
+}
+
+.footer-nav{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0;
+
+	@include break(1600px){
+		min-width: 520px;
+		justify-content: space-between;
+	}
+}
+
+.footer-nav__item{
+	@include font(12px, bold, $text-color, $font-eb);	
+	@include hover-color($accent-color);	
+	margin-right: 5px;
+}

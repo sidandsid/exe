@@ -1,0 +1,727 @@
+/* Language, contact, login, wishlist, social-media */
+.header-top{
+	background-color: #111111;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	@include break(laptop-s){ padding: 0 5%; }
+	@include break(laptop-m){ padding: 0 10%; }
+	@include break(laptop-l){ padding: 0 17%; }
+}
+
+/* Language */
+.header-lang{
+	position: relative;
+	width: 105px;
+
+	@include hover{		
+		.header-lang__icon{
+			fill: $accent-color-secondary;			
+		}
+
+		.header-lang__link{
+			color: $accent-color-secondary;
+			background-color: $bg-color-dark;		
+
+			&:after{
+				transform: rotate(-180deg);
+				border-color: $accent-color-secondary transparent transparent transparent;				
+			}
+		}
+
+		.header-lang__list{
+			visibility: visible;
+			opacity: 1;
+			top: 100%;
+			height: auto;	
+			transition: all .3s ease;
+		}		
+	}
+
+	&__link{			
+		@extend %header-item;
+		@extend %header-text;
+		padding-right: 25px;
+		transition: color .3s ease;
+		
+		&:after{
+			@include caret(#363636);
+			right: 9px;
+			top: 49.5%;
+		}
+	}
+
+	&__icon{
+		@include size(15px, 15px);	
+		@extend %header-icon;					
+	}	
+}
+
+/* Language drop-down */
+.header-lang__list{	
+	position: absolute;
+	display: block;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	top: 80%;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;		
+	@include size(100%, 0px);	
+	z-index: 1;	
+	background-color: $bg-color-dark;
+	transition: all .3s ease;	
+
+	&-item{
+		@include size(85%, 35px);
+		@include flex(row, center);	
+		@include border(solid, 1px 0 0 0, #363636);	
+	}
+
+	&-link{
+		@extend %header-text;
+		@include hover-color($accent-color-secondary);
+	}
+}
+
+/* Phone */
+.header-phone{
+	width: 142px;
+	@extend %header-item;
+
+	&__icon{
+		@include size(18px, 16px);
+		@extend %header-icon;
+	}
+
+	&__number{
+		@extend %header-text;
+		cursor: pointer;
+	}
+
+	@include hover{
+		.header-phone__icon{ 
+			fill: $accent-color-secondary; 
+		}
+
+		.header-phone__number{ 
+			color: $accent-color-secondary; 
+		}
+	}
+}
+
+/* Email */
+.header-email{
+	width: 162px;
+	@extend %header-item;
+
+	&__icon{
+		@include size(17px, 17px);
+		@extend %header-icon;		
+	}
+
+	&__address{
+		@extend %header-text;
+		cursor: pointer;
+	}
+
+	@include hover{
+		.header-email__icon{ 
+			fill: $accent-color-secondary; 
+		}
+
+		.header-email__address{ 
+			color: $accent-color-secondary; 
+		}
+	}
+}
+
+/* Divider */
+.header-divider{	
+	@include break(laptop-s){ width: 13%; }
+}	
+
+/* Login */
+.header-login{
+	width: 150px;
+	@extend %header-item;
+	@extend %header-text;	
+
+	&__signin{		
+		height: 100%;
+		@include flex(row, space-between);		
+		@extend %header-text;
+		transition: color .3s ease;
+
+		@include hover{
+			color: $accent-color-secondary;			
+
+			.header-login__icon{
+				fill: $accent-color-secondary;				
+			}
+		}
+	}
+
+	&__icon{
+		@include size(19px, 18px);
+		@extend %header-icon;
+		margin-right: 5px;
+	}
+
+	&__register{
+		height: 100%;
+		@include flex(row, space-between);
+		@extend %header-text;
+		@include hover-color($accent-color-secondary);
+	}
+}
+	
+
+/* Wishlist */
+.header-wishlist{
+	@include hover{	
+		.header-wishlist__icon{
+			fill: $accent-color;			
+		}
+
+		.header-wishlist__name{
+			color: $accent-color;			
+		}
+
+		.header-wishlist__item{
+			color: #ffffff;			
+
+			&:after{
+				border-color: $accent-color transparent transparent transparent;				
+			}
+		}		
+	}
+
+	@include break(tablet-l){ position: relative; }		
+
+	&__btn{		
+		width: 165px;
+		@extend %header-item;
+		@extend %header-text;
+		padding-right: 25px;
+		transition: background-color .3s ease;	
+
+		&.active{		
+			@include break(tablet-l){
+				background-color: $bg-color-dark;
+				transition: background-color .3s ease;	
+			}
+		
+			.header-wishlist__icon{
+				fill: $accent-color;				
+			}
+
+			.header-wishlist__name{
+				color: $accent-color;				
+			}
+
+			.header-wishlist__item{
+				color: #ffffff;				
+
+				&:after{			
+					border-color: $accent-color transparent transparent transparent;
+					transform: rotate(-180deg);					
+				}			
+			}
+		}
+
+		@include break(tablet-l){ position: relative; }
+	}	
+	
+	&__name{		
+		cursor: pointer;
+		pointer-events: none;
+	}
+
+	&__icon{
+		@include size(21px, 21px);
+		@extend %header-icon;
+		pointer-events: none;
+	}
+
+	&__item{
+		position: relative;	
+		color: $text-color-light;
+		cursor: pointer;	
+		padding-right: 3px;	
+		pointer-events: none;
+		transition: color .3s ease;
+
+		&:after{
+			@include caret(#363636);
+			right: -15px;
+			top: 5px;
+		}
+	}
+}
+
+/* Social-media */
+.header-social{
+	@extend %header-item;
+		
+	&__list{
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__icon{
+		@extend %sm-icon;
+		fill: #363636;
+		margin-right: 5px;
+	}
+}
+
+/* Logo, navigation, cart, search */
+.header-menu{	
+	position: relative;
+	@include flex(row, center);
+	background-color: $bg-color;
+	padding: 10px 7%;
+
+	@include break(tablet-l){
+		min-height: 110px;
+		justify-content: space-between;		
+	}
+
+	@include break(1400px){ padding: 0 20%; }		
+}
+
+/* Logo */
+.header-logo{
+	display: none;
+
+	@include break(tablet-l){
+		display: block;				
+		@include font(56px, normal, #ffffff, $font-logo);
+	}
+}
+
+.header-logo_mobile{
+	display: none;
+
+	@media screen and (max-width: 1023px){
+		display: block;
+		width: 70%;
+		@include font(32px, normal, #ffffff, $font-logo);
+		cursor: pointer;
+
+		&-menu{		
+			font-size: 30px;
+			cursor: pointer;
+		}
+	}
+}
+
+/* Navigation */
+.header-nav{
+	@media screen and (max-width: 1023px){
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;		
+		padding: 20px 5% 0 5%;		
+		background-color: $bg-color-dark;
+		z-index: 1;		
+		display: none;	
+	}
+
+	@include break(tablet-l){
+		@include flex(row, space-between);	
+		width: 70%;
+		max-width: 760px;	
+	}
+
+	@include break(1900px){ margin-left: 6%; }
+
+	&__item{	
+		position: relative;	
+		display: block;	
+		@media screen and (max-width: 1023px){ min-height: 40px; }	
+
+		@include hover{
+			.header-nav__link{
+				color: $accent-color;			
+			}
+
+			.header-nav__link.drop-down{
+				&:after{
+					border-color: $accent-color transparent transparent transparent;					
+				}
+			}
+
+			.header-nav__caret{
+				border-color: $accent-color transparent transparent transparent;			
+			}
+
+			.header-nav__link:before{
+				background-color: $accent-color;			
+			}
+		}								
+	}
+
+	&__link{		
+		display: block;
+		@include font(14px, bold, #707070, $font-b);
+		text-transform: uppercase;					
+		transition: color .3s ease;		
+
+		&:before{
+			@extend %absolute;
+			@include size(8px, 2px);
+			background-color: transparent;
+			left: 0;
+			top: -5px;
+			transition: background-color .3s ease;
+		}
+
+		&.drop-down{
+			&:after{				
+				@include caret(#707070);
+				top: 5px;
+				
+				@media screen and (max-width: 1023px){
+					transform: translate(8px, 0);
+				}
+				
+				@include break(tablet-l){
+					right: -15px;					
+				}
+			}
+		}
+
+		&.active{			
+			color: $accent-color;
+			
+			&:before{
+				@extend %absolute;
+				@include size(8px, 2px);
+				background-color: $accent-color;
+				left: 0;
+				top: -5px;				
+			}
+
+			&:after{
+				border-color: $accent-color transparent transparent transparent;
+				transform: rotate(-180deg);
+				transition: transform .3s ease;
+
+				@media screen and (max-width: 1023px){
+					transform: translate(8px, 0);
+				}
+			}			
+		}
+	}
+
+	&__list{
+		visibility: hidden;
+		height: 0;
+		top: 80%;
+		opacity: 0;
+		z-index: 1;		
+		transition: all .3s ease;
+		@media screen and (max-width: 1023px){ padding: 15px 0 0 15px; }
+
+		@include break(tablet-l){
+			position: absolute;	
+			display: block;			
+			transform: translate(-10px, 0);							
+			width: calc(100% + 50px);
+			background-color: #202020;
+			border-radius: 3px;
+			padding: 15px 0 0 10px;	
+		}
+
+		&.visible{
+			visibility: visible;
+			opacity: 1;
+			top: 140%;
+			height: auto;	
+			transition: all .3s ease;
+		}
+	}
+
+	&__list-item{
+		position: relative;
+		min-height: 40px;					
+
+		&:before{
+			@extend %absolute;
+			@include size(8px, 2px);
+			left: 0;
+			top: -5px;		
+			background-color: $accent-color;
+		}
+	}
+
+	&__list-link{
+		@include font(13px, normal, #ffffff, $font-r);
+		text-transform: uppercase;
+		@include hover-color($accent-color);
+	}
+}	
+
+/* Cart */
+.header-cart{	
+	@include break(tablet-l){ position: relative; }
+
+	&__btn{	
+		position: relative;
+		display: block;
+		margin: 0 10px;
+
+		&.active{
+			.header-cart__icon{
+				@include size(24px, 24px);
+				transition: .3s ease;
+			}			
+		}
+
+		@include break(1400px){
+			position: absolute;
+			right: 22%;
+		}
+	}	
+	
+	&__icon{		
+		@include size(20px, 20px);		
+		fill: #555555;
+		margin: 5px 12px 0 0;
+		transition: .3s ease;
+		pointer-events: none;
+	}
+
+	&__counter{
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;		
+		@include flex(row, center);
+		min-height: 18px;
+		min-width: 18px;
+		border-radius: 50%;
+		background-color: $accent-color;	
+		@include font(11px, normal, #ffffff, $font-text);	
+		cursor: pointer;	
+		pointer-events: none;	
+	}
+}
+
+/* Search */
+.header-search{
+	@include size(27px, 27px);	
+	@include flex(row, center);
+
+	&__input{		
+		position: absolute;
+		top: 0;	
+		left: 0;
+		@include size(100%, 100%);						
+		@include font(16px, normal, $accent-color, $font-text);
+		background-color: $bg-color-dark;
+		padding: 10px 5% 10px 10%;
+		border: none;
+		outline: none;		
+		display: none;
+
+		&::placeholder{
+			@include font(16px, normal, $accent-color, $font-text);
+			letter-spacing: 1px;
+		}	
+
+		&:focus{	
+			@include border(solid, 0 0 2px 0, $accent-color);		
+		}		
+	}
+
+	&__icon{
+		position: absolute;	
+		@include size(16px, 16px);
+		fill: #555555;
+		@include hover-fill($accent-color);
+		cursor: pointer;
+
+		&.clicked{			
+			@include size(20px, 20px);		
+			fill: $accent-color;
+			@include hover-fill(#ffffff);
+			transform: translate(-35px, 0);
+		}
+	}
+
+	&__close{
+		cursor: pointer;
+
+		&.active{
+			position: absolute;
+			display: block;
+			top: 50%;
+			bottom: 50%;
+			transform: translate(0, -50%);	
+			@include size(25px, 25px);		
+
+			&:before, &:after{
+				@extend %absolute;
+				top: 0;
+				right: 50%;
+				@include size(0px, 21px);							
+				border: 1.5px solid $accent-color;
+				border-radius: 5px;
+				transform: rotate(45deg);
+				transition: border-color .3s ease;
+			}
+
+			&:after{			
+				transform: rotate(-45deg);		
+			}
+
+			@include hover{
+				&:before, &:after{
+					border-color: #ffffff;					
+				}
+			}			
+		}
+	}
+}
+
+/* Products for wishlist and cart list */
+.products{		
+	position: absolute;		
+	visibility: hidden;	
+	z-index: 100;
+	@include size(95%, 0);	
+	max-width: 370px;	
+	opacity: 0;
+	background-color: $bg-color-dark;	
+	transition: all .3s ease;
+
+	&.wishlist{
+		left: 0;
+	}	
+
+	&.cart{
+		right: 0; 
+
+		@media screen and (max-width: 1023px){
+			left: 0;
+			margin: 0 auto;
+		}
+	}
+
+	&.visible{		
+		visibility: visible;
+		height: auto;
+		opacity: 1;
+		top: 10vh;
+		transition: all .3s ease;
+
+		@include break(tablet-l){		
+			top: 100%;
+			opacity: 1;
+			transition: all .3s ease;
+		}
+	}	
+
+	@media screen and (max-width: 1023px){		
+		right: 0;
+		top: 10vh;
+		margin: 0 auto;
+		box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);		
+	}
+
+	@include break(tablet-l){
+		width: 340px;
+		top: 80%;
+		opacity: 0;			
+		transition: all .3s ease;	
+	}
+}	
+	
+.products-close{
+	width: 85%;
+	margin: 0 auto;
+	text-align: right;
+	@include border(solid, 0 0 1px 0, #2d2d2d);
+	@include break(tablet-l){ display: none; }
+
+	&__btn{
+		@include font(28px, bold, #000000, $font-b);
+		@include hover-color($accent-color);
+		cursor: pointer;
+	}			
+}
+
+.products-item{
+	display: flex;
+	width: 85%;
+	min-height: 100px;	
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+
+	@include hover{
+		.products-item__title{
+			color: $accent-color-secondary;
+			transition: color .3s ease;
+		}
+
+		.products-item__remove{
+			color: $accent-color;
+			transition: color .3s ease;
+		}
+	}
+	
+	&:not(:nth-last-child(2)){
+		@include border(solid, 0 0 1px 0, #2d2d2d);	
+	}
+
+	&__img{	
+		max-height: 70px;
+		margin-right: 20px;
+	}
+
+	&__text{		 
+		display: flex;
+		flex-direction: column;		
+		justify-content: space-between;
+		padding: 5px 0;
+	}
+
+	&__title{		
+		@include font(14px, normal, #707070, $font-text);		
+		transition: color .3s ease;
+	}
+
+	&__price{
+		@include font(16px, bold, #ffffff, $font-text);
+		margin: 20px 0 10px 0;			
+	}
+
+	&__remove{		
+		@include font(10px, bold, $text-color, $font-text);
+		text-transform: uppercase;
+		transition: color .3s ease;
+	}
+}
+
+.products-bottom{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding: 30px;
+	background-color: #000000;
+
+	&__btn{
+		@extend %btn;
+		font-size: 12px;
+		min-width: 130px;
+		min-height: 40px;		
+		background-color: $bg-color;
+		margin: 0 10px;
+		@include hover-bg($accent-color-secondary);
+	}
+}

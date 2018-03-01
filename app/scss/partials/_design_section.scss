@@ -1,0 +1,76 @@
+.design-section{
+	position: relative;
+	min-height: 670px;
+	padding: 80px 5% 0 5%;
+	background-color: $bg-color;	
+}
+
+.design-screens{
+	max-width: 730px; 
+	max-height: 576px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	@include break(laptop-m){
+		position: absolute;
+		bottom: 0;		
+	}
+
+	@include break(laptop-l){ left: 15%; }
+	@include break(1850px){ left: 18.8%; }
+
+	&__img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.design-content{
+	margin: 0 auto 40px auto;
+
+	@include break(laptop-m){
+		position: absolute;
+		top: 20%;
+		right: 10%;
+		max-width: 360px;
+	}
+
+	@include break(1600px){ right: 15%; }
+	@include break(1800px){ right: 20.3%; }
+}
+
+.design-title{
+	@extend %title-left;
+}
+
+.design-subtitle{
+	@extend %subtitle-left;
+	margin-bottom: 25px;
+}
+
+.design-list{
+	@include font(14px, normal, $text-color-light, $font-text);
+	margin: 0 0 55px 50px;
+
+	&__item{
+		position: relative;	
+		margin-bottom: 20px;
+
+		&:before{
+			@extend %absolute;
+			@include size(8px, 2px);
+			background-color: $accent-color-secondary;
+			margin-left: -30px;
+			top: 50%;			
+		}
+	}
+}
+
+.design-btn{
+	@extend %btn;
+	font-size: 14px;
+	border: 2px solid $accent-color-secondary;
+	background-color: $accent-color-secondary;
+	@include hover-btn(#ffffff, transparent);
+}
